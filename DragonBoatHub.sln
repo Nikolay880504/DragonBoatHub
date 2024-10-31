@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DragonBot", "DragonBot", "{4362CE57-82A5-4A14-9F19-53A89EED8174}"
+	ProjectSection(SolutionItems) = preProject
+		appsettings.json = appsettings.json
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBot", "DragonBot\DragonBot\DragonBot.csproj", "{7BB9E3FA-9857-4B66-BB2D-F1EDB8D48B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBot", "DragonBot\DragonBot\DragonBot.csproj", "{7BB9E3FA-9857-4B66-BB2D-F1EDB8D48B77}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DragonBoatHub.Core", "DragonBoatHub.Core", "{5FC9AAC6-7C09-4B55-B217-0DB340CB0BF6}"
 EndProject
