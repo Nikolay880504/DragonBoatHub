@@ -1,45 +1,36 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Telegram.Bot;
-using Telegram.Bot.Polling;
-using Telegram.Bot.Types;
-using Telegram.Bot.Types.Enums;
-
+using Microsoft.Extensions.DependencyInjection;
+using DragonBot.Handlers.Interfaces;
+using DragonBot.Handlers;
+using DragonBot.TelegramBot;
 
 namespace DragonBot
 {
     internal class Program
     {
-        private static readonly string token;
-
-
-        static Program()
+        static async Task Main(string[] args)
         {
             var configuration = new ConfigurationBuilder()
                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                .Build();
-            token = configuration["BotSettings:Token"]!;
-        }
+            var token = configuration["BotSettings:Token"]!;
 
-        static async Task Main(string[] args)
-        {
-            var botClient = new TelegramBotClient(token);
+            var serviceProvider = new ServiceCollection()
+                .AddTransient<UserStatusHandler>()
+                .AddTransient<SingUpHandler>()
+                .AddSingleton<ITelegramBotClient>(new TelegramBotClient(token))
+                .AddSingleton<TelegramBotService>()
+                .AddSingleton<CommandFactory>()
+                .BuildServiceProvider();
 
-            var receiverOptions = new ReceiverOptions
-            {
-                AllowedUpdates = new[] { UpdateType.Message, UpdateType.CallbackQuery }, 
-                ThrowPendingUpdates = true 
-            };
+            var bot = serviceProvider.GetRequiredService<TelegramBotService>();
+            bot.Start();
 
-            botClient.StartReceiving(
-                Handlers.BotHandlers.HandleUpdateAsync,
-                Handlers.BotHandlers.HandleErrorAsync,
-                receiverOptions
-            );
             await Task.Delay(-1);
         }
 
-       
     }
 
 }
