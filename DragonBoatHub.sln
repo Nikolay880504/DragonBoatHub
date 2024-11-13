@@ -20,11 +20,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DragonBoatHub.API.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Domain", "DragonBoatDomain\DragonBoatHub.API.Domain.csproj", "{7EDE0DCB-912F-4E91-9D4F-529C5140916B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.API.Infrastructure.Data", "Infrastructure\DragonBoatHub.API.Infrastructure.Data.csproj", "{BF710380-E6FC-4594-9D5A-827DE3A63269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Infrastructure.Data", "Infrastructure\DragonBoatHub.API.Infrastructure.Data.csproj", "{BF710380-E6FC-4594-9D5A-827DE3A63269}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F88A056F-006B-4FE2-B5A3-23B270B16FEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.API.Application", "DragonBoatHub.API.Application\DragonBoatHub.API.Application.csproj", "{227BEB74-1C7D-4E91-9D83-A0F30C6930DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Application", "DragonBoatHub.API.Application\DragonBoatHub.API.Application.csproj", "{227BEB74-1C7D-4E91-9D83-A0F30C6930DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.API", "..\DragonBoatHub.API\DragonBoatHub.API.csproj", "{E0824B8F-6979-487D-8A98-8836945989B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 		{227BEB74-1C7D-4E91-9D83-A0F30C6930DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{227BEB74-1C7D-4E91-9D83-A0F30C6930DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{227BEB74-1C7D-4E91-9D83-A0F30C6930DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0824B8F-6979-487D-8A98-8836945989B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0824B8F-6979-487D-8A98-8836945989B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0824B8F-6979-487D-8A98-8836945989B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0824B8F-6979-487D-8A98-8836945989B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{BF710380-E6FC-4594-9D5A-827DE3A63269} = {F88A056F-006B-4FE2-B5A3-23B270B16FEB}
 		{F88A056F-006B-4FE2-B5A3-23B270B16FEB} = {95E9396D-741D-4E27-9677-82663F30B887}
 		{227BEB74-1C7D-4E91-9D83-A0F30C6930DB} = {57D6FBF7-1EFB-455F-81DC-865EC6DD73B8}
+		{E0824B8F-6979-487D-8A98-8836945989B2} = {7BC3B92F-B36A-4919-A0CF-528FC5B256F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD8A1F2F-876C-4D7B-9A1C-E3114D6E94EA}

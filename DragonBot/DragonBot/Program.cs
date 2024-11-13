@@ -1,11 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Telegram.Bot;
 using Microsoft.Extensions.DependencyInjection;
-using DragonBot.Handlers.Interfaces;
-using DragonBot.Handlers;
-using DragonBot.TelegramBot;
+using DragonBoatHub.TelegramBot.DragonBot.Handlers;
+using DragonBoatHub.TelegramBot.DragonBot.Processing;
+using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
+using Refit;
 
-namespace DragonBot
+namespace DragonBoatHub.TelegramBot
 {
     internal class Program
     {
@@ -17,12 +18,17 @@ namespace DragonBot
                .Build();
             var token = configuration["BotSettings:Token"]!;
 
-            var serviceProvider = new ServiceCollection()
-                .AddTransient<UserStatusHandler>()
-                .AddTransient<SingUpHandler>()
-                .AddSingleton<ITelegramBotClient>(new TelegramBotClient(token))
-                .AddSingleton<TelegramBotService>()
-                .AddSingleton<CommandFactory>()
+            var services = new ServiceCollection();
+            services.AddTransient<UserStatusHandler>();
+            services.AddTransient<SingUpHandler>();
+            services.AddSingleton<ITelegramBotClient>(new TelegramBotClient(token));
+            services.AddSingleton<TelegramBotService>();
+            services.AddSingleton<CommandFactory>();
+            services.AddSingleton<TrainingService>();
+            services.AddRefitClient<ITrainingApiClient>()
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7288"));
+
+            var serviceProvider = services
                 .BuildServiceProvider();
 
             var bot = serviceProvider.GetRequiredService<TelegramBotService>();
@@ -30,7 +36,5 @@ namespace DragonBot
 
             await Task.Delay(-1);
         }
-
     }
-
 }

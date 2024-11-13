@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DragonBoatDomain.Models
+namespace DragonBoatHub.API.Domain.Models
 {
     public class Sportsman
     {

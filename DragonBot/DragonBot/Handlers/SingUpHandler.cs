@@ -1,19 +1,26 @@
-﻿using DragonBot.Handlers.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using Telegram.Bot;
 using Telegram.Bot.Types;
-using Telegram.Bot.Types.ReplyMarkups;
+using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
 
-namespace DragonBot.Handlers
+
+namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
 {
     internal class SingUpHandler : IHandler
     {
-        public async Task HandleAsync(Update update, ITelegramBotClient client) { 
-        
+        private readonly TrainingService _trainingService;
+
+        public SingUpHandler(TrainingService trainingService)
+        {
+            _trainingService = trainingService;
+        }
+        public async Task HandleAsync(Update update, ITelegramBotClient client) {
+            var model = await _trainingService.GetTrainingSchedule();
+
+            foreach (var item in model)
+            {
+                Console.WriteLine(item);
+            }
         }
         
     }

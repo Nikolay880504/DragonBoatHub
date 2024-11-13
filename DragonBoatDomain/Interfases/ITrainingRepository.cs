@@ -1,14 +1,9 @@
-﻿using DragonBoatDomain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DragonBoatHub.API.Domain.Models;
 
-namespace DragonBoatDomain.Interfases
+namespace DragonBoatHub.API.Domain.Interfases
 {
     public interface ITrainingRepository
     {
-        Task<IEnumerable<TrainingSession>> GetAvailableSessionsAsync();
+       Task<IEnumerable<TrainingSession>> GetAvailableSessionsAsync();
     }
 }

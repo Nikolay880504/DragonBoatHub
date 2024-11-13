@@ -1,9 +1,9 @@
-﻿using DragonBot.Handlers.Interfaces;
+﻿using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace DragonBot.Handlers
+namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
 {
     internal class UserStatusHandler : IHandler
     {

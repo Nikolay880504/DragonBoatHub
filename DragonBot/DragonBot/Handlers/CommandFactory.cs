@@ -1,8 +1,8 @@
 ﻿
-using DragonBot.Handlers.Interfaces;
+using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DragonBot.Handlers
+namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
 {
     internal class CommandFactory
     {
