@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DragonBoatHub.TelegramBot", "DragonBoatHub.TelegramBot", "{4362CE57-82A5-4A14-9F19-53A89EED8174}"
-	ProjectSection(SolutionItems) = preProject
-		appsettings.json = appsettings.json
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBot", "DragonBot\DragonBot\DragonBot.csproj", "{7BB9E3FA-9857-4B66-BB2D-F1EDB8D48B77}"
 EndProject
@@ -26,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F88A056F-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Application", "DragonBoatHub.API.Application\DragonBoatHub.API.Application.csproj", "{227BEB74-1C7D-4E91-9D83-A0F30C6930DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.API", "..\DragonBoatHub.API\DragonBoatHub.API.csproj", "{E0824B8F-6979-487D-8A98-8836945989B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API", "..\DragonBoatHub.API\DragonBoatHub.API.csproj", "{E0824B8F-6979-487D-8A98-8836945989B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

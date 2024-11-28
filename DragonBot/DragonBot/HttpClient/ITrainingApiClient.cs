@@ -6,6 +6,6 @@ namespace DragonBoatHub.TelegramBot.DragonBot.HttpClient
     internal interface ITrainingApiClient
     {
         [Get("/api/trainingsessions/available")]
-        Task<IEnumerable<TrainingSessionDto>> GetAvailableSessionsAsync();
+        Task<List<TrainingSessionDto>> GetAvailableSessionsAsync();
     }
 }

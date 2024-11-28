@@ -6,5 +6,5 @@ namespace DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 
 internal interface IHandler
 {
-    Task HandleAsync(Update update, ITelegramBotClient client);
+  
 }
