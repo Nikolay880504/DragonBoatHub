@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DragonBoatHub.API.Application.Interfaces;
-using DragonBoatHub.API.Infrastructure;
 
 namespace DragonBoatHub.API
 {
@@ -20,7 +19,6 @@ namespace DragonBoatHub.API
         {
             var sessions = await _trainingService.GetAvailableSessionsAsync();
             return Ok(sessions); 
-        }
-        
+        }        
     }
 }

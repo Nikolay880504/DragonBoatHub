@@ -20,5 +20,11 @@ namespace DragonBoatHub.API
 
             return Ok(IsAuthenticated);
         }
+
+        [HttpPost("set-locale/{telegramUserId}/{locale}")] 
+        public async void SetUserLocaleAsync(long telegramUserId, string locale)
+        {
+   
+        }
     }
 }

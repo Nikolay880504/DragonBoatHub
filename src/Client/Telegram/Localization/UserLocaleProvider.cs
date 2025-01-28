@@ -9,7 +9,7 @@ using DragonBot.Localization.Interfases;
 
 namespace DragonBot.Localization
 {
-    public class UserLocaleProvider 
+    public class UserLocaleProvider : IUserLocaleProvider
 
     {
 
@@ -22,9 +22,9 @@ namespace DragonBot.Localization
             {
                 return Task.FromResult(_userLocales[userId]);
             }
-
             return Task.FromResult(new Locale("sl"));
         }
+     
 
         public Task SetUserLocaleAsync(long userId, Locale locale, CancellationToken cancellationToken = default)
         {

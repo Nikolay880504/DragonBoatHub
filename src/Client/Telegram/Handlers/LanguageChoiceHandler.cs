@@ -30,6 +30,7 @@ namespace DragonBot.Handlers
 
         public async Task<IResult> HandleAsync()
         {
+
             long? userId = _context?.BotRequestContext?.Update?.Message?.From?.Id;
             if (!userId.HasValue)
             {
@@ -37,8 +38,14 @@ namespace DragonBot.Handlers
                 return Results.Empty;
             }
 
+            var userLocale = _context?.BotRequestContext?.MessageText;
+
+            await _trainingApiClient.SetUserLocationAsync(userId.Value, userLocale);
+
+
             ReplyKeyboardMarkup keyboardMarkup;
             string message;
+            
             bool isRegistered = await _trainingApiClient.CheckRegistractionByTelegramIdAsync(userId.Value);
             if (isRegistered)
             {
@@ -60,8 +67,10 @@ namespace DragonBot.Handlers
                 };
                 message = _localizer["MessageFromRegistration"];
             }
+            
 
             return Results.Message(message, keyboard: keyboardMarkup);
+
         }
     }
 }

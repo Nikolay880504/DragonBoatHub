@@ -10,8 +10,7 @@ using DragonBot.Extensions;
 using DragonBot.Handlers;
 using MinimalTelegramBot.StateMachine.Extensions;
 using DragonBot.Localization;
-using DragonBot.Localization.Interfases;
-
+using Microsoft.Extensions.DependencyInjection.Extensions;
 namespace DragonBoatHub.TelegramBot
 {
     internal class Program
@@ -23,20 +22,34 @@ namespace DragonBoatHub.TelegramBot
             builder.Services.AddTransient<LanguageChoiceHandler>();
             builder.Services.AddTransient<AvailableTrainingsHandler>();
             builder.Services.AddTransient<StartCommandHandler>();
-          //  builder.Services.AddSingleton<IUserLocaleProviderExtended,UserLocaleProvider>();
-          //  builder.Services.AddScoped<UserLocaleLocalizer>();
+            //  builder.Services.AddSingleton<IUserLocaleProviderExtended,UserLocaleProvider>();
+            //  builder.Services.AddScoped<UserLocaleLocalizer>();
             builder.Services.AddTransient<SingUpHandler>();
+            builder.Services.TryAddSingleton<IUserLocaleProvider, UserLocaleProvider>();
+            Program.RegisterLocalization(builder.Services);
             builder.Services.AddSingleLocale(new Locale("sl"), locale => locale.EnrichFromFile("Localization/sl.yaml"));
-            builder.Services.AddSingleLocale(new Locale("en"), locale => locale.EnrichFromFile("Localization/en.yaml"));
+            //    builder.Services.AddSingleLocale(new Locale("en"), locale => locale.EnrichFromFile("Localization/en.yaml"));
             builder.Services.AddRefitClient<ITrainingApiClient>()
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7288"));
             builder.Services.AddStateMachine();
             var bot = builder.Build();
-           
+
             bot.UseStateMachine();
             bot.UseLocalization();
             bot.UseBotHandlers();
             bot.Run();
+        }
+
+        private static void RegisterLocalization(IServiceCollection services)
+        {
+            ArgumentNullException.ThrowIfNull(services, "services");
+            services.AddLocalizer<UserLocaleProvider>( builder =>
+            {
+                builder.AddLocale(new Locale("sl")).EnrichFromFile("Localization/sl.yaml");
+                builder.AddLocale(new Locale("en")).EnrichFromFile("Localization/en.yaml");
+
+            });
+           
         }
     }
 }

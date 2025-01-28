@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\localization\\userlocaleprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\localization\\userlocaleprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\languagechoicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\languagechoicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\localization\\sl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\localization\\sl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\localization\\en.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\localization\\en.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\trainingsessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\trainingsessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\extensions\\commandhandlersregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\extensions\\commandhandlersregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\startcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\startcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\singuphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\singuphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\localization\\interfases\\iuserlocaleproviderextended.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\localization\\interfases\\iuserlocaleproviderextended.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\httpclient\\itrainingapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\httpclient\\itrainingapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\httpclient\\modelsdto\\trainingsessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\httpclient\\modelsdto\\trainingsessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{508C526B-BE66-4A5C-B0E6-958F5D0E0568}|src\\Application\\DragonBoatHub.API.Application.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\application\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{508C526B-BE66-4A5C-B0E6-958F5D0E0568}|src\\Application\\DragonBoatHub.API.Application.csproj|solutionrelative:src\\application\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -11,52 +67,12 @@
       "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}|src\\Domain\\DragonBoatHub.API.Domain.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}|src\\Domain\\DragonBoatHub.API.Domain.csproj|solutionrelative:src\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\httpclient\\itrainingapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\httpclient\\itrainingapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\trainingsessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\trainingsessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\httpclient\\modelsdto\\trainingsessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\httpclient\\modelsdto\\trainingsessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\availabletrainingshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\availabletrainingshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\languagechoicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\languagechoicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\singuphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\singuphandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\handlers\\startcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|solutionrelative:src\\client\\telegram\\handlers\\startcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\dragonboathub.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\dragonboathub.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\api\\dragonboathub.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{163D0E8B-B345-4414-AF61-ED23E237AC3F}|src\\API\\DragonBoatHub.API.csproj|solutionrelative:src\\api\\dragonboathub.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{508C526B-BE66-4A5C-B0E6-958F5D0E0568}|src\\Application\\DragonBoatHub.API.Application.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\application\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{508C526B-BE66-4A5C-B0E6-958F5D0E0568}|src\\Application\\DragonBoatHub.API.Application.csproj|solutionrelative:src\\application\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D214E435-1080-437E-8CB2-E32677DC8730}|src\\Client\\Telegram\\DragonBot.csproj|c:\\myprojects\\dragonboathubproject\\dragonboathub\\src\\client\\telegram\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -73,7 +89,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,72 +97,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Domain\\Models\\User.cs",
-              "RelativeDocumentMoniker": "src\\Domain\\Models\\User.cs",
-              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Domain\\Models\\User.cs",
-              "RelativeToolTip": "src\\Domain\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "UserLocaleProvider.cs",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\UserLocaleProvider.cs",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Localization\\UserLocaleProvider.cs",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\UserLocaleProvider.cs*",
+              "RelativeToolTip": "src\\Client\\Telegram\\Localization\\UserLocaleProvider.cs*",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAswBgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T19:03:46.425Z",
+              "WhenOpened": "2025-01-23T16:43:14.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AvailableTrainingsHandler.cs",
-              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\AvailableTrainingsHandler.cs",
-              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Handlers\\AvailableTrainingsHandler.cs",
-              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\AvailableTrainingsHandler.cs",
-              "RelativeToolTip": "src\\Client\\Telegram\\Handlers\\AvailableTrainingsHandler.cs",
+              "DocumentIndex": 10,
+              "Title": "IUserLocaleProviderExtended.cs",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\Interfases\\IUserLocaleProviderExtended.cs",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Localization\\Interfases\\IUserLocaleProviderExtended.cs",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\Interfases\\IUserLocaleProviderExtended.cs",
+              "RelativeToolTip": "src\\Client\\Telegram\\Localization\\Interfases\\IUserLocaleProviderExtended.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:37:23.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T16:40:22.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "en.yaml",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\en.yaml",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Localization\\en.yaml",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\en.yaml",
+              "RelativeToolTip": "src\\Client\\Telegram\\Localization\\en.yaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-01-23T16:19:10.644Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "CommandHandlersRegistrar.cs",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Extensions\\CommandHandlersRegistrar.cs",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Extensions\\CommandHandlersRegistrar.cs",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Extensions\\CommandHandlersRegistrar.cs",
+              "RelativeToolTip": "src\\Client\\Telegram\\Extensions\\CommandHandlersRegistrar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:03:23.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "sl.yaml",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\sl.yaml",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Localization\\sl.yaml",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Localization\\sl.yaml",
+              "RelativeToolTip": "src\\Client\\Telegram\\Localization\\sl.yaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-01-23T16:02:49.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LanguageChoiceHandler.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\LanguageChoiceHandler.cs",
               "RelativeDocumentMoniker": "src\\Client\\Telegram\\Handlers\\LanguageChoiceHandler.cs",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\LanguageChoiceHandler.cs",
               "RelativeToolTip": "src\\Client\\Telegram\\Handlers\\LanguageChoiceHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwC4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:37:21.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T15:54:08.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SingUpHandler.cs",
-              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
-              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
-              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
-              "RelativeToolTip": "src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Program.cs",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Program.cs",
+              "RelativeToolTip": "src\\Client\\Telegram\\Program.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwDAAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:37:19.701Z",
+              "WhenOpened": "2025-01-23T14:17:26.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "SingUpHandler.cs",
+              "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
+              "RelativeDocumentMoniker": "src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
+              "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
+              "RelativeToolTip": "src\\Client\\Telegram\\Handlers\\SingUpHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T18:37:19.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "StartCommandHandler.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\StartCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\Client\\Telegram\\Handlers\\StartCommandHandler.cs",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\Handlers\\StartCommandHandler.cs",
               "RelativeToolTip": "src\\Client\\Telegram\\Handlers\\StartCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:37:16.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:37:16.417Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "TrainingSessionDto.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\HttpClient\\ModelsDto\\TrainingSessionDto.cs",
               "RelativeDocumentMoniker": "src\\Client\\Telegram\\HttpClient\\ModelsDto\\TrainingSessionDto.cs",
@@ -154,68 +215,59 @@
               "RelativeToolTip": "src\\Client\\Telegram\\HttpClient\\ModelsDto\\TrainingSessionDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:37:06.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:37:06.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "ITrainingApiClient.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\HttpClient\\ITrainingApiClient.cs",
               "RelativeDocumentMoniker": "src\\Client\\Telegram\\HttpClient\\ITrainingApiClient.cs",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\HttpClient\\ITrainingApiClient.cs",
               "RelativeToolTip": "src\\Client\\Telegram\\HttpClient\\ITrainingApiClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:36:54.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:36:54.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\UserController.cs",
               "RelativeDocumentMoniker": "src\\API\\UserController.cs",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\UserController.cs",
               "RelativeToolTip": "src\\API\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:36:38.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:36:38.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TrainingSessionsController.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\TrainingSessionsController.cs",
               "RelativeDocumentMoniker": "src\\API\\TrainingSessionsController.cs",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\TrainingSessionsController.cs",
               "RelativeToolTip": "src\\API\\TrainingSessionsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:36:34.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:36:34.472Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DragonBoatHub.API",
+              "DocumentIndex": 16,
+              "Title": "DragonBoatHub.API.csproj",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\DragonBoatHub.API.csproj",
               "RelativeDocumentMoniker": "src\\API\\DragonBoatHub.API.csproj",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\DragonBoatHub.API.csproj",
               "RelativeToolTip": "src\\API\\DragonBoatHub.API.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-21T18:32:00.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2025-01-21T18:32:00.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "DragonBoatHub.API.http",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\DragonBoatHub.API.http",
               "RelativeDocumentMoniker": "src\\API\\DragonBoatHub.API.http",
@@ -223,12 +275,11 @@
               "RelativeToolTip": "src\\API\\DragonBoatHub.API.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-01-21T18:30:46.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:30:46.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\API\\appsettings.Development.json",
@@ -236,21 +287,19 @@
               "RelativeToolTip": "src\\API\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-21T18:00:33.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:00:33.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\API\\appsettings.json",
               "ToolTip": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\API\\appsettings.json",
               "RelativeToolTip": "src\\API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-21T18:00:26.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T18:00:26.995Z"
             },
             {
               "$type": "Document",
@@ -266,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Client\\Telegram\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Client\\Telegram\\appsettings.json",
@@ -278,11 +327,15 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\DragonBoatHub.API\\Program.cs",
               "RelativeDocumentMoniker": "DragonBoatHub.API\\Program.cs",
