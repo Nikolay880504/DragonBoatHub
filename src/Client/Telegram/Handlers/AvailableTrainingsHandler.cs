@@ -12,15 +12,12 @@ namespace DragonBot.Handlers
 {
     internal class AvailableTrainingsHandler : IHandler
     {
-        private readonly IBotRequestContextAccessor _context;
         private readonly ITrainingApiClient _trainingApiClient;
         private readonly ILocalizer _localizer;
 
 
-        public AvailableTrainingsHandler(IBotRequestContextAccessor context,
-            ITrainingApiClient trainingApiClient, ILocalizer localizer)
+        public AvailableTrainingsHandler(ITrainingApiClient trainingApiClient, ILocalizer localizer)
         {
-            _context = context;
             _trainingApiClient = trainingApiClient;
             _localizer = localizer;
         }

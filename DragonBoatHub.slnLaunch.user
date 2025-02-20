@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "src\\Client\\Telegram\\DragonBot.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\API\\DragonBoatHub.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

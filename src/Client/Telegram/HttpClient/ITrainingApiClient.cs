@@ -13,6 +13,9 @@ namespace DragonBoatHub.TelegramBot.DragonBot.HttpClient
         Task<bool> CheckRegistractionByTelegramIdAsync(long? userId);
 
         [Post("/api/user/set-locale/{telegramUserId}/{locale}")]
-        Task SetUserLocationAsync(long telegramUserId, string locale);
+        Task SetUserLocalizationAsync(long telegramUserId, string locale);
+
+        [Get("/api/user/get-locale/{telegramUserId}")]
+        Task<string> GetUserLocalizationAsync(long telegramUserId);
     }
 }

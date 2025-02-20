@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "DragonBoatHub.API.TrainingSessionsController",
+    "Method": "GetAvailableSessionsAsync",
+    "RelativePath": "api/TrainingSessions/available",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "GetUserLocaleAsync",
+    "RelativePath": "api/User/get-locale/{telegramUserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telegramUserId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetUserLocaleAsync",
+    "RelativePath": "api/User/set-locale/{telegramUserId}/{locale}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telegramUserId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "locale",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "CheckRegistractionByTelegramIdAsync",
+    "RelativePath": "api/User/status/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -16,7 +16,7 @@ namespace DragonBoatHub.API.Domain.Models
         public DateTime DateOfBirth { get; set; }
         public string? Level { get; set; }
         public string? Localization { get; set; }
-        public int? TelegramUserId { get; set; }
+        public long? TelegramUserId { get; set; }
     }
 
 }

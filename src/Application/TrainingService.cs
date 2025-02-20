@@ -17,11 +17,6 @@ namespace DragonBoatHub.API.Application
             return sessions.ToList();
         }
 
-        public async Task<bool> CheckRegistractionByTelegramIdAsync(long? sportsmanId)
-        {
-           var IsAuthenticated = await _trainingRepository.CheckIdAsync(sportsmanId);
-
-            return IsAuthenticated;
-        }
+        
     }
 }

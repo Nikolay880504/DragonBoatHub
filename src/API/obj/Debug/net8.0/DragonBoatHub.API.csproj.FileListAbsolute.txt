@@ -329,3 +329,7 @@ C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\scoped
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\DragonBo.0455C4E2.Up2Date
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\DragonBoatHub.API.genruntimeconfig.cache
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\ref\DragonBoatHub.API.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\bin\Debug\net8.0\DragonBoatHub.API.staticwebassets.endpoints.json
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets\msbuild.DragonBoatHub.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DragonBoatHub.API.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4aaf50cc61dfb9cc5230b88864362a190f97d911")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be02728cb1604bff292fdd5034ef5fddf73dad65")]
 [assembly: System.Reflection.AssemblyProductAttribute("DragonBoatHub.API.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DragonBoatHub.API.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

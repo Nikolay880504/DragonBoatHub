@@ -876,12 +876,18 @@
           "DragonBoatHub.API.Domain": "1.0.0"
         },
         "runtime": {
-          "DragonBoatHub.API.Application.dll": {}
+          "DragonBoatHub.API.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DragonBoatHub.API.Domain/1.0.0": {
         "runtime": {
-          "DragonBoatHub.API.Domain.dll": {}
+          "DragonBoatHub.API.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DragonBoatHub.API.Infrastructure/1.0.0": {
@@ -891,7 +897,10 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.1"
         },
         "runtime": {
-          "DragonBoatHub.API.Infrastructure.dll": {}
+          "DragonBoatHub.API.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -60,7 +60,6 @@ C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\n
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Refit.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Refit.HttpClientFactory.dll
-C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\System.Text.Json.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Telegram.Bot.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\YamlDotNet.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\DragonBot.csproj.AssemblyReference.cache

@@ -19,7 +19,7 @@ namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
         public async Task HandleAsync(Update update, ITelegramBotClient client)
         {
             List<TrainingSessionDto> model = await _trainingApiClient.GetAvailableSessionsAsync();
-
+            
             var chatId = update.Message.Chat.Id;
 
             ReplyKeyboardMarkup replyKeyboardMarkup = CreateCheckboxKeyboardMarkup(model);

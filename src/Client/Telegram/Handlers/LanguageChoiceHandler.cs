@@ -8,6 +8,7 @@ using DragonBot.States;
 using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
 using MinimalTelegramBot.Localization.Abstractions;
 using MinimalTelegramBot;
+using DragonBot.Localization.Interfases;
 
 namespace DragonBot.Handlers
 {
@@ -17,38 +18,46 @@ namespace DragonBot.Handlers
         private readonly ITrainingApiClient _trainingApiClient;
         private readonly ILocalizer _localizer;
         private readonly IBotRequestContextAccessor _context;
-       
+        private readonly IEnumerable<ISupportedLocale> _supportedLocales;
+        private readonly IUserLocaleCache _userLocaleCache;
+
 
         public LanguageChoiceHandler(IStateMachine stateMachine,
-            ITrainingApiClient trainingApiClient, ILocalizer userLocale, IBotRequestContextAccessor context)
+            ITrainingApiClient trainingApiClient, ILocalizer userLocale, IBotRequestContextAccessor context
+, IEnumerable<ISupportedLocale> supportedLocales, IUserLocaleCache userLocaleCache)
         {
             _stateMachine = stateMachine;
             _trainingApiClient = trainingApiClient;
             _localizer = userLocale;
             _context = context;
+            _supportedLocales = supportedLocales;
+            _userLocaleCache = userLocaleCache;
+
         }
 
         public async Task<IResult> HandleAsync()
         {
 
-            long? userId = _context?.BotRequestContext?.Update?.Message?.From?.Id;
-            if (!userId.HasValue)
+            long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
+
+            var textButton = _context!.BotRequestContext!.MessageText;
+
+            var locale = _supportedLocales.FirstOrDefault(locale => locale.NameButton == textButton);
+
+            if (locale != null)
             {
-                Console.WriteLine("UserId is null");
-                return Results.Empty;
+                _userLocaleCache.UpdateLocalCache(userId, locale.Code);
+                _context!.BotRequestContext!.UserLocale = new Locale(locale.Code);
+                await _trainingApiClient.SetUserLocalizationAsync(userId, locale.Code);
             }
-
-            var userLocale = _context?.BotRequestContext?.MessageText;
-
-            await _trainingApiClient.SetUserLocationAsync(userId.Value, userLocale);
-
 
             ReplyKeyboardMarkup keyboardMarkup;
             string message;
-            
-            bool isRegistered = await _trainingApiClient.CheckRegistractionByTelegramIdAsync(userId.Value);
+
+            bool isRegistered = await _trainingApiClient.CheckRegistractionByTelegramIdAsync(userId);
             if (isRegistered)
             {
+
                 _stateMachine.SetState(MainMenuButtonsState.state);
                 var singUpButton = _localizer["Button.SignUpForTraining"];
                 keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { singUpButton } })
@@ -67,7 +76,6 @@ namespace DragonBot.Handlers
                 };
                 message = _localizer["MessageFromRegistration"];
             }
-            
 
             return Results.Message(message, keyboard: keyboardMarkup);
 

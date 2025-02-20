@@ -5,6 +5,7 @@ using DragonBoatHub.API.Application;
 using DragonBoatHub.API.Infrastructure;
 using DragonBoatHub.API.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
+using DragonBoatHub.API.Application.Intrfaces;
 
 
 namespace DragonBoatHub.API
@@ -22,6 +23,8 @@ namespace DragonBoatHub.API
                    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<ITrainingRepository, TrainingRepository>();
             builder.Services.AddScoped<ITrainingService, TrainingService>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddControllers();  
             builder.WebHost.UseUrls("https://localhost:7288");
 

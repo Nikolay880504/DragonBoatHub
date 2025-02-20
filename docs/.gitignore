@@ -5,6 +5,9 @@
 *.userosscache
 *.sln.docstates
 
+# Ignore the DragonBoatHub folder
+DragonBoatHub/
+
 # Ignore appsettings files
 appsettings.json
 

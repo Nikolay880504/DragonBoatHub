@@ -9,10 +9,7 @@ namespace DragonBoatHub.API.Infrastructure
 {
     public class TrainingRepository : ITrainingRepository
     {
-        public Task<bool> CheckIdAsync(long? sportsmanId)
-        {
-            return Task.FromResult(true);
-        }
+        
 
         public Task<IEnumerable<TrainingSession>> GetAvailableSessionsAsync()
         {
