@@ -23,12 +23,13 @@ namespace DragonBot.Handlers
 
 
         public LanguageChoiceHandler(IStateMachine stateMachine,
-            ITrainingApiClient trainingApiClient, ILocalizer userLocale, IBotRequestContextAccessor context
-, IEnumerable<ISupportedLocale> supportedLocales, IUserLocaleCache userLocaleCache)
+             ITrainingApiClient trainingApiClient, ILocalizer localizer, 
+             IBotRequestContextAccessor context,IEnumerable<ISupportedLocale> supportedLocales, 
+             IUserLocaleCache userLocaleCache)
         {
             _stateMachine = stateMachine;
             _trainingApiClient = trainingApiClient;
-            _localizer = userLocale;
+            _localizer = localizer;
             _context = context;
             _supportedLocales = supportedLocales;
             _userLocaleCache = userLocaleCache;
@@ -39,16 +40,15 @@ namespace DragonBot.Handlers
         {
 
             long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-
             var textButton = _context!.BotRequestContext!.MessageText;
-
             var locale = _supportedLocales.FirstOrDefault(locale => locale.NameButton == textButton);
 
             if (locale != null)
             {
+                await _trainingApiClient.SetUserLocalizationAsync(userId, locale.Code);
                 _userLocaleCache.UpdateLocalCache(userId, locale.Code);
                 _context!.BotRequestContext!.UserLocale = new Locale(locale.Code);
-                await _trainingApiClient.SetUserLocalizationAsync(userId, locale.Code);
+                
             }
 
             ReplyKeyboardMarkup keyboardMarkup;
@@ -57,9 +57,8 @@ namespace DragonBot.Handlers
             bool isRegistered = await _trainingApiClient.CheckRegistractionByTelegramIdAsync(userId);
             if (isRegistered)
             {
-
                 _stateMachine.SetState(MainMenuButtonsState.state);
-                var singUpButton = _localizer["Button.SignUpForTraining"];
+                var singUpButton = _localizer["Button.MainMenu"];
                 keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { singUpButton } })
                 {
                     ResizeKeyboard = true
@@ -68,7 +67,7 @@ namespace DragonBot.Handlers
             }
             else
             {
-                _stateMachine.SetState(SingUpState.state);
+                _stateMachine.SetState(RequestPhoneNumberState.state);
                 var registrationButton = _localizer["Button.Registration"];
                 keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { registrationButton } })
                 {
@@ -78,7 +77,6 @@ namespace DragonBot.Handlers
             }
 
             return Results.Message(message, keyboard: keyboardMarkup);
-
         }
     }
 }

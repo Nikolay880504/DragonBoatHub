@@ -1,5 +1,4 @@
 ﻿using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
-using MinimalTelegramBot;
 using Results = MinimalTelegramBot.Results.Results;
 using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
 using Telegram.Bot.Types.ReplyMarkups;
@@ -15,7 +14,6 @@ namespace DragonBot.Handlers
         private readonly ITrainingApiClient _trainingApiClient;
         private readonly ILocalizer _localizer;
 
-
         public AvailableTrainingsHandler(ITrainingApiClient trainingApiClient, ILocalizer localizer)
         {
             _trainingApiClient = trainingApiClient;
@@ -28,7 +26,6 @@ namespace DragonBot.Handlers
 
             return Results.Message(message, trainingListKeyboard);
         }
-
 
         private async Task<ReplyKeyboardMarkup> GetTrainingListKeyboard()
         {

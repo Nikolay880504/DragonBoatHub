@@ -11,7 +11,6 @@ namespace DragonBoatHub.API.Domain.Models
         public int Id { get; set; }
         public int CurrentAvailableSlots { get; set; }
         public string? AgeCategory { get; set; }
-
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
     }

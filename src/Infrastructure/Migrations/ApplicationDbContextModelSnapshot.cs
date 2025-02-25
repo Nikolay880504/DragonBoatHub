@@ -26,7 +26,7 @@ namespace DragonBoatHub.API.Infrastructure.Migrations
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
@@ -41,11 +41,11 @@ namespace DragonBoatHub.API.Infrastructure.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("TelegramUserId")
+                    b.Property<int>("Status")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("TEXT");
+                    b.Property<long?>("TelegramUserId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

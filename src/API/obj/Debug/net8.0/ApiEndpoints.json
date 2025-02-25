@@ -12,13 +12,13 @@
   {
     "ContainingType": "DragonBoatHub.API.UserController",
     "Method": "GetUserLocaleAsync",
-    "RelativePath": "api/User/get-locale/{telegramUserId}",
+    "RelativePath": "api/User/get-locale/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "telegramUserId",
+        "Name": "userId",
         "Type": "System.Int64",
         "IsRequired": true
       }
@@ -37,20 +37,145 @@
   },
   {
     "ContainingType": "DragonBoatHub.API.UserController",
-    "Method": "SetUserLocaleAsync",
-    "RelativePath": "api/User/set-locale/{telegramUserId}/{locale}",
+    "Method": "SetBirthDayAsync",
+    "RelativePath": "api/User/set-dayOfBirth",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "telegramUserId",
+        "Name": "user",
+        "Type": "DragonBoatHub.API.Models.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetFirstNameAsync",
+    "RelativePath": "api/User/set-firstName/{userId}/{firstName}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "firstName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetLastNameAsync",
+    "RelativePath": "api/User/set-lastName/{userId}/{lastName}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "lastName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetUserLocaleAsync",
+    "RelativePath": "api/User/set-locale/{userId}/{locale}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
         "Type": "System.Int64",
         "IsRequired": true
       },
       {
         "Name": "locale",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetPhoneNumberAsync",
+    "RelativePath": "api/User/set-phoneNumber/{userId}/{phoneNumber}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetRegistrationStatusAsync",
+    "RelativePath": "api/User/set-registrationStatus/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
@@ -72,7 +197,7 @@
     "Parameters": [
       {
         "Name": "userId",
-        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],

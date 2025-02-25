@@ -14,7 +14,6 @@ namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
         private readonly IStateMachine _stateMachine;
         private readonly IEnumerable<ISupportedLocale> _supportedLocales;
 
-
         public StartCommandHandler(IStateMachine stateMachine, IEnumerable<ISupportedLocale> supportedLocales)
         {
             _stateMachine = stateMachine;
@@ -25,8 +24,8 @@ namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
             _stateMachine.SetState(LanguageChoiceState.state);
 
             var languageKeyboardMarkup = new ReplyKeyboardMarkup(
-            _supportedLocales.Select(locale => new KeyboardButton(locale.NameButton)).ToArray()
-)
+            _supportedLocales.Select(locale => new KeyboardButton(locale.NameButton)).ToArray())
+
             {
                 ResizeKeyboard = true
             };

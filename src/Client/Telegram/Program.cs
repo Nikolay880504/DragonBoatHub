@@ -46,7 +46,11 @@ namespace DragonBoatHub.TelegramBot
             builder.Services.AddTransient<LanguageChoiceHandler>();
             builder.Services.AddTransient<AvailableTrainingsHandler>();
             builder.Services.AddTransient<StartCommandHandler>();
-            builder.Services.AddTransient<SingUpHandler>();
+            builder.Services.AddTransient<RequestPhoneNumberHandler>();
+            builder.Services.AddTransient<RequestFirstNameHandler>();
+            builder.Services.AddTransient<RequestLastNameHandler>();
+            builder.Services.AddTransient<UserBirthDayHandler>();
+            builder.Services.AddTransient<UserRegistrationStatusHandler>();
             builder.Services.AddSingleton<IUserLocaleCache, UserLocaleCache>();
             RegisterLocalization(builder.Services, supportedLocales);
             builder.Services.AddRefitClient<ITrainingApiClient>()

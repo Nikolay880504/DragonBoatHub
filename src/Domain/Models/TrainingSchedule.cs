@@ -9,7 +9,6 @@ namespace DragonBoatHub.API.Domain.Models
     public class TrainingSchedule
     {
         public int Id { get; set; }
-
         public List<TrainingSession> Monday { get; set; } = new List<TrainingSession>();
         public List<TrainingSession> Tuesday { get; set; } = new List<TrainingSession>();
         public List<TrainingSession> Wednesday { get; set; } = new List<TrainingSession>();

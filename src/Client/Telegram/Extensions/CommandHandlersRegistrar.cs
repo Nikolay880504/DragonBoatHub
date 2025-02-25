@@ -18,11 +18,15 @@ namespace DragonBot.Extensions
         {
             app.Handle(([FromServices] StartCommandHandler startCommandHandler) => startCommandHandler.HandleAsync()).
                  FilterCommand("/start");
-
             app.Handle(([FromServices] LanguageChoiceHandler languageChoice) => languageChoice.HandleAsync()).FilterState(LanguageChoiceState.state);
-
             app.Handle(([FromServices] AvailableTrainingsHandler mainMenu) => mainMenu.HandleAsync()).FilterState(MainMenuButtonsState.state).
                 FilterMessageTextWithLocalizer("Button.SignUpForTraining");
+            app.Handle(([FromServices] RequestPhoneNumberHandler singUp) => singUp.HandleAsync()).FilterState(RequestPhoneNumberState.state).
+                FilterMessageTextWithLocalizer("Button.Registration");
+            app.Handle(([FromServices] RequestFirstNameHandler requestFirstName) => requestFirstName.HandleAsync()).FilterState(RequestFirstNameState.state);
+            app.Handle(([FromServices] RequestLastNameHandler requestLastName) => requestLastName.HandleAsync()).FilterState(RequestLastNameState.state);
+            app.Handle(([FromServices] UserBirthDayHandler userBirthDayHandler ) => userBirthDayHandler.HandleAsync()).FilterState(UserBirthDayState.state);
+            app.Handle(([FromServices] UserRegistrationStatusHandler userRegistration) => userRegistration.HandleAsync()).FilterState(UserRegistrationStatusState.state);
         }
     }
 }
