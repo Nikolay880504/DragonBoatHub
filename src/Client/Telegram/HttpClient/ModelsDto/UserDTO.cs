@@ -6,9 +6,5 @@ using System.Threading.Tasks;
 
 namespace DragonBot.HttpClient.ModelsDto
 {
-    class UserDTO
-    {
-        public long TelegramUserId { get; set; }
-        public DateTime BirthDay { get; set; }
-    }
+   
 }

@@ -9,6 +9,10 @@
       {
         "Path": "src\\API\\DragonBoatHub.API.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "DragonBoatHub.Admin\\DragonBoatHub.Admin.csproj",
+        "Action": "Start"
       }
     ]
   }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NssBCYAX/SI=",
+  "dgSpecHash": "EgA1/8hfbSk=",
   "success": true,
   "projectFilePath": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Application\\DragonBoatHub.API.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LapTopUSA\\.nuget\\packages\\riok.mapperly\\4.1.1\\riok.mapperly.4.1.1.nupkg.sha512"
+  ],
   "logs": []
 }

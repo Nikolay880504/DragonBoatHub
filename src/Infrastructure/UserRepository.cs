@@ -2,6 +2,7 @@
 using DragonBoatHub.API.Infrastructure.Context;
 using DragonBoatHub.API.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using DragonBoatHub.Contracts;
 
 namespace DragonBoatHub.API.Infrastructure
 {
@@ -114,6 +115,19 @@ namespace DragonBoatHub.API.Infrastructure
                 _context.Users.Update(existingUser);
             }
 
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task SetTrainingLevel(long userId, int userLevel)
+        {
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.TelegramUserId == userId);
+
+            if (existingUser is not null)
+            {
+                existingUser.Level = (EUserLevel)userLevel;
+                _context.Users.Update(existingUser);
+            }
+            
             await _context.SaveChangesAsync();
         }
     }

@@ -189,6 +189,33 @@
   },
   {
     "ContainingType": "DragonBoatHub.API.UserController",
+    "Method": "SetTrainingLevel",
+    "RelativePath": "api/User/set-trainingLevel/{userId}/{userLevel}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "userLevel",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserController",
     "Method": "CheckRegistractionByTelegramIdAsync",
     "RelativePath": "api/User/status/{userId}",
     "HttpMethod": "GET",

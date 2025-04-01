@@ -1,0 +1,12 @@
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\bin\Debug\net8.0\DragonBoatHub.Contracts.deps.json
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\bin\Debug\net8.0\DragonBoatHub.Contracts.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\bin\Debug\net8.0\DragonBoatHub.Contracts.pdb
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.AssemblyInfoInputs.cache
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.AssemblyInfo.cs
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.csproj.CoreCompileInputs.cache
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.sourcelink.json
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\refint\DragonBoatHub.Contracts.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\DragonBoatHub.Contracts.pdb
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBoatHub.Contracts\obj\Debug\net8.0\ref\DragonBoatHub.Contracts.dll

@@ -1,5 +1,7 @@
-﻿using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
+﻿using DragonBoatHub.Contracts;
+using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
+using DragonBot.Extensions;
 using DragonBot.HttpClient.ModelsDto;
 using DragonBot.States;
 using MinimalTelegramBot;
@@ -7,6 +9,7 @@ using MinimalTelegramBot.Localization.Abstractions;
 using MinimalTelegramBot.Results;
 using MinimalTelegramBot.StateMachine.Abstractions;
 using System.Globalization;
+using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using Telegram.Bot.Types.ReplyMarkups;
 using Results = MinimalTelegramBot.Results.Results;
@@ -30,19 +33,11 @@ namespace DragonBot.Handlers
         }
         public async Task<IResult> HandleAsync()
         {
-            long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-            string birthDate = _context!.BotRequestContext!.Update!.Message!.Text!;
-
-            if (!IsValidDateOfBirth(birthDate))
-            {
-                return Results.Message(_localizer["BirthDayCorrect"]);
-            }
-            var birthDay = DateTime.ParseExact(birthDate, "dd.MM.yyyy", CultureInfo.InvariantCulture);
-            var userDTO = new UserDTO { BirthDay = birthDay, TelegramUserId = userId };
-            await _trainingApiClient.SetBirthDayAsync(userDTO);
+            var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
+            string userLevel = _context!.BotRequestContext!.Update!.Message!.Text!;
+            await _trainingApiClient.SetTrainingLevel(userId, GetUserLevel(userLevel));
             await _trainingApiClient.SetRegistrationStatusAsync(userId);
             _stateMachine.SetState(MainMenuButtonsState.state);
-
             KeyboardButton[] buttons = new KeyboardButton[]
              {
                   new KeyboardButton(_localizer["Button.MainMenu"])
@@ -57,11 +52,26 @@ namespace DragonBot.Handlers
             return Results.Message(_localizer["RegistrationSuccessful"], keyboard);
         }
 
-        bool IsValidDateOfBirth(string input)
+        private int GetUserLevel(string userLevelName)
         {
-            var datePattern = @"^\d{2}\.\d{2}\.\d{4}$";
-            var regex = new Regex(datePattern);
-            return regex.IsMatch(input);
+            var locale = _context!.BotRequestContext!.UserLocale;
+
+            var allKeyForUserLevel = new Dictionary<string, EUserLevelDto>
+            {
+              { "Button.LevelBeginner", EUserLevelDto.Beginner},
+              { "Button.LevelAmateur", EUserLevelDto.Amateur },
+              { "Button.LevelPro", EUserLevelDto.Pro}
+            };
+
+
+            var userLevel = allKeyForUserLevel
+                .ToDictionary(
+                    pair => _localizer.GetLocalizedString(pair.Key, locale),
+                    pair => pair.Value
+                );
+
+            return (int)userLevel[userLevelName];
+
         }
     }
 }

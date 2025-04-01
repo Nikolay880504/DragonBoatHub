@@ -1,5 +1,7 @@
 ﻿using DragonBoatHub.API.Application.Intrfaces;
 using DragonBoatHub.API.Domain.Interfaces;
+using DragonBoatHub.API.Domain.Models;
+using DragonBoatHub.Contracts;
 
 namespace DragonBoatHub.API.Application
 {
@@ -48,6 +50,11 @@ namespace DragonBoatHub.API.Application
         public async Task SetRegistrationStatusAsync(long trlegramId)
         {
             await _userRepository.SetRegistrationStatusAsync(trlegramId);
+        }
+
+        public async Task SetTrainingLevel(long userId, int userLevel)
+        {
+            await _userRepository.SetTrainingLevel(userId, userLevel);
         }
     }
 }

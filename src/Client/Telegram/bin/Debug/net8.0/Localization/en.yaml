@@ -8,8 +8,12 @@ LastName: "To continue the registration, please enter your Last Name."
 BirthDay: "Please enter your birth date in the format dd.mm.yyyy to complete the registration."
 BirthDayCorrect: "Please enter a valid date in the format dd.mm.yyyy (e.g. 01.01.1990)."
 RegistrationSuccessful : "Registration successful! Welcome aboard!"
+ChooseTrainingLevel: "Select the button with your level"
 Button:
  SignUpForTraining: Sign Up for Training
  Registration: Registration
  SendContact: Send contact
  MainMenu : "Main menu"
+ LevelBeginner : "Beginner"
+ LevelAmateur : "Amateur"
+ LevelPro : "Pro"

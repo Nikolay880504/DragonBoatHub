@@ -40,6 +40,7 @@ C:\MyProjects\DragonBoatHubProject\DragonBoatHub\DragonBot\DragonBot\bin\Debug\n
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\DragonBot.exe
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\appsettings.json
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Localization\en.yaml
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Localization\sl.yaml
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\DragonBot.deps.json
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\DragonBot.runtimeconfig.json
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\DragonBot.dll
@@ -62,6 +63,8 @@ C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\n
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Refit.HttpClientFactory.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Telegram.Bot.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\YamlDotNet.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\DragonBoatHub.Contracts.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\DragonBoatHub.Contracts.pdb
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\DragonBot.csproj.AssemblyReference.cache
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\DragonBot.GeneratedMSBuildEditorConfig.editorconfig
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\DragonBot.AssemblyInfoInputs.cache
@@ -74,4 +77,3 @@ C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\n
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\DragonBot.pdb
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\DragonBot.genruntimeconfig.cache
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\obj\Debug\net8.0\ref\DragonBot.dll
-C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\Client\Telegram\bin\Debug\net8.0\Localization\sl.yaml

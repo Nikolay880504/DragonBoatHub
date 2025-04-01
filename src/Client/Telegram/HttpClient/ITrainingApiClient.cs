@@ -1,6 +1,9 @@
-﻿using DragonBoatHub.TelegramBot.DragonBot.HttpClient.ModelDto;
+﻿using DragonBoatHub.Contracts;
+using DragonBoatHub.TelegramBot.DragonBot.HttpClient.ModelDto;
 using DragonBot.HttpClient.ModelsDto;
+using Microsoft.AspNetCore.Mvc;
 using Refit;
+using System.Diagnostics.Eventing.Reader;
 
 namespace DragonBoatHub.TelegramBot.DragonBot.HttpClient
 {
@@ -28,9 +31,11 @@ namespace DragonBoatHub.TelegramBot.DragonBot.HttpClient
         Task SetLastNameAsync(long telegramUserId, string firstName);
 
         [Post("/api/user/set-dayOfBirth")]
-        Task SetBirthDayAsync([Body] UserDTO user);
+        Task SetBirthDayAsync([Body] UserBirthdayDto user);
         [Post("/api/user/set-registrationStatus/{telegramUserId}")]
         Task SetRegistrationStatusAsync(long telegramUserId);
-        
+
+        [Post("/api/user/set-trainingLevel/{telegramUserId}/{userLevel}")]
+        Task SetTrainingLevel(long telegramUserId, int userLevel);
     }
 }

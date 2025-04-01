@@ -35,6 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\DragonBoatHub.Contracts\DragonBoatHub.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Localization\en.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

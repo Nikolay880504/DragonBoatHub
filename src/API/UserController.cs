@@ -2,6 +2,8 @@
 using DragonBoatHub.API.Application.Intrfaces;
 using System.Globalization;
 using DragonBoatHub.API.Models;
+using DragonBoatHub.API.Domain.Models;
+using DragonBoatHub.Contracts;
 
 namespace DragonBoatHub.API
 {
@@ -63,5 +65,12 @@ namespace DragonBoatHub.API
         {
             await _userService.SetRegistrationStatusAsync(userId);
         }
+        [HttpPost("set-trainingLevel/{userId}/{userLevel}")]
+        public async Task SetTrainingLevel(long userId, int userLevel)
+        {
+            
+            await _userService.SetTrainingLevel(userId, userLevel);
+        }
+
     }
 }

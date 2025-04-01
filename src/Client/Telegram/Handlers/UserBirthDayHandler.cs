@@ -6,6 +6,7 @@ using MinimalTelegramBot;
 using MinimalTelegramBot.Localization.Abstractions;
 using MinimalTelegramBot.Results;
 using MinimalTelegramBot.StateMachine.Abstractions;
+using Telegram.Bot.Types.ReplyMarkups;
 using Results = MinimalTelegramBot.Results.Results;
 
 namespace DragonBot.Handlers
@@ -31,9 +32,8 @@ namespace DragonBot.Handlers
             long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
             string lastName = _context!.BotRequestContext!.Update.Message.Text!;
             await _trainingApiClient.SetLastNameAsync(userId, lastName);
-            _stateMachine.SetState(UserRegistrationStatusState.state);
+            _stateMachine.SetState(ChooseTrainingLevelState.state);
             return Results.Message(_localizer["BirthDay"]);
         }
-        
     }
 }

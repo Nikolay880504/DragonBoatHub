@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API", "src\API\DragonBoatHub.API.csproj", "{163D0E8B-B345-4414-AF61-ED23E237AC3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.Admin", "DragonBoatHub.Admin\DragonBoatHub.Admin.csproj", "{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.Contracts", "DragonBoatHub.Contracts\DragonBoatHub.Contracts.csproj", "{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

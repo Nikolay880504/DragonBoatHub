@@ -1,4 +1,7 @@
 ﻿
+using DragonBoatHub.API.Domain.Models;
+using DragonBoatHub.Contracts;
+
 namespace DragonBoatHub.API.Application.Intrfaces
 {
     public interface IUserService
@@ -11,5 +14,7 @@ namespace DragonBoatHub.API.Application.Intrfaces
         Task SetLastNameAsync(long userId, string lastName);
         Task SetBirthDayAsync(long userId, DateTime birthDay);
         Task SetRegistrationStatusAsync(long userId);
+
+        Task SetTrainingLevel(long userId, int userLevel);
     }
 }

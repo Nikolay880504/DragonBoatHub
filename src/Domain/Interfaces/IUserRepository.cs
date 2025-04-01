@@ -1,4 +1,4 @@
-﻿
+﻿using DragonBoatHub.API.Domain.Models;
 
 namespace DragonBoatHub.API.Domain.Interfaces
 {
@@ -12,5 +12,8 @@ namespace DragonBoatHub.API.Domain.Interfaces
         Task SetLastNameAsync(long userId, string lastName);
         Task SetBirthDayAsync (long userId, DateTime birthDay);
         Task SetRegistrationStatusAsync(long userId);
+
+        Task SetTrainingLevel(long userId,  int userLevel);
+
     }
 }
