@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DragonBoatHub.Admin.Pages;
-[Authorize(Policy = "AuthorizationUser")]
+[Authorize("AuthorizationUser")]
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
@@ -15,6 +16,6 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+      
     }
 }

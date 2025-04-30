@@ -1,6 +1,6 @@
 ﻿namespace DragonBoatHub.API.Models
 {
-    public class UserDTO
+    public class UserDto
     {
         public long TelegramUserId { get; set; }
         public DateTime BirthDay { get; set; }

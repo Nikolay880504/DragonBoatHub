@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DragonBoatHub.API.Application.Intrfaces;
-using System.Globalization;
 using DragonBoatHub.API.Models;
-using DragonBoatHub.API.Domain.Models;
-using DragonBoatHub.Contracts;
+
 
 namespace DragonBoatHub.API
 {
@@ -55,7 +53,7 @@ namespace DragonBoatHub.API
         }
 
         [HttpPost("set-dayOfBirth")]
-        public async Task SetBirthDayAsync([FromBody]UserDTO user)
+        public async Task SetBirthDayAsync([FromBody]UserDto user)
         {
             await _userService.SetBirthDayAsync(user.TelegramUserId, user.BirthDay);           
         }

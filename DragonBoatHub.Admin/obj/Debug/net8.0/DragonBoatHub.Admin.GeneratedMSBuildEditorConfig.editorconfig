@@ -1,4 +1,5 @@
 is_global = true
+build_property.RefitInternalNamespace = DragonBoatHub.Admin
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
@@ -26,6 +27,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/MyProjects/DragonBoatHubProject/DragonBoatHub/DragonBoatHub.Admin/Areas/SuperUser/Pages/AccountHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwZXJVc2VyXFBhZ2VzXEFjY291bnRIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/MyProjects/DragonBoatHubProject/DragonBoatHub/DragonBoatHub.Admin/Areas/SuperUser/Pages/AddTrainingSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwZXJVc2VyXFBhZ2VzXEFkZFRyYWluaW5nU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/MyProjects/DragonBoatHubProject/DragonBoatHub/DragonBoatHub.Admin/Areas/SuperUser/Pages/NewTraining.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3VwZXJVc2VyXFBhZ2VzXE5ld1RyYWluaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/MyProjects/DragonBoatHubProject/DragonBoatHub/DragonBoatHub.Admin/Areas/SuperUser/Pages/TrainingDashboard.cshtml]

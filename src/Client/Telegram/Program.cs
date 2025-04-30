@@ -10,7 +10,6 @@ using DragonBot.Extensions;
 using DragonBot.Handlers;
 using MinimalTelegramBot.StateMachine.Extensions;
 using DragonBot.Localization;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using DragonBot.Localization.Interfases;
 namespace DragonBoatHub.TelegramBot
 {
@@ -54,7 +53,7 @@ namespace DragonBoatHub.TelegramBot
             builder.Services.AddTransient<ChooseTrainingLevelHandler>();
             builder.Services.AddSingleton<IUserLocaleCache, UserLocaleCache>();
             RegisterLocalization(builder.Services, supportedLocales);
-            builder.Services.AddRefitClient<ITrainingApiClient>()
+            builder.Services.AddRefitClient<IUserTrainingApiClient>()
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7288"));
             builder.Services.AddStateMachine();
             var bot = builder.Build();

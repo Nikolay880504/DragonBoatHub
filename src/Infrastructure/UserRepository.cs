@@ -2,7 +2,7 @@
 using DragonBoatHub.API.Infrastructure.Context;
 using DragonBoatHub.API.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using DragonBoatHub.Contracts;
+
 
 namespace DragonBoatHub.API.Infrastructure
 {

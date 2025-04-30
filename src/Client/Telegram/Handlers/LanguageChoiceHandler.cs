@@ -15,7 +15,7 @@ namespace DragonBot.Handlers
     internal class LanguageChoiceHandler : IHandler
     {
         private readonly IStateMachine _stateMachine;
-        private readonly ITrainingApiClient _trainingApiClient;
+        private readonly IUserTrainingApiClient _trainingApiClient;
         private readonly ILocalizer _localizer;
         private readonly IBotRequestContextAccessor _context;
         private readonly IEnumerable<ISupportedLocale> _supportedLocales;
@@ -23,7 +23,7 @@ namespace DragonBot.Handlers
 
 
         public LanguageChoiceHandler(IStateMachine stateMachine,
-             ITrainingApiClient trainingApiClient, ILocalizer localizer, 
+             IUserTrainingApiClient trainingApiClient, ILocalizer localizer, 
              IBotRequestContextAccessor context,IEnumerable<ISupportedLocale> supportedLocales, 
              IUserLocaleCache userLocaleCache)
         {

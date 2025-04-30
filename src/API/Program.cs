@@ -25,6 +25,8 @@ namespace DragonBoatHub.API
             builder.Services.AddScoped<ITrainingService, TrainingService>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
+            builder.Services.AddScoped<IAdminRepository, AdminRepository>();
             builder.Services.AddControllers();  
             builder.WebHost.UseUrls("https://localhost:7288");
 

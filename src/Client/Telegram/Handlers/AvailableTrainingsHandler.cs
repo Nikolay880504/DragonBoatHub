@@ -11,10 +11,10 @@ namespace DragonBot.Handlers
 {
     internal class AvailableTrainingsHandler : IHandler
     {
-        private readonly ITrainingApiClient _trainingApiClient;
+        private readonly IUserTrainingApiClient _trainingApiClient;
         private readonly ILocalizer _localizer;
 
-        public AvailableTrainingsHandler(ITrainingApiClient trainingApiClient, ILocalizer localizer)
+        public AvailableTrainingsHandler(IUserTrainingApiClient trainingApiClient, ILocalizer localizer)
         {
             _trainingApiClient = trainingApiClient;
             _localizer = localizer;

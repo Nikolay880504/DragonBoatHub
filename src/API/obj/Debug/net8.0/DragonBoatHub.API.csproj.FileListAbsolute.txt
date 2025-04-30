@@ -349,10 +349,10 @@ C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\static
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DragonBoatHub.API.props
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DragonBoatHub.API.props
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\DragonBo.0455C4E2.Up2Date
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\DragonBoatHub.API.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\refint\DragonBoatHub.API.dll
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\DragonBoatHub.API.pdb
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\DragonBoatHub.API.genruntimeconfig.cache
 C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\ref\DragonBoatHub.API.dll
+C:\MyProjects\DragonBoatHubProject\DragonBoatHub\src\API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

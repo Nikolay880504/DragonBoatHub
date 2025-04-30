@@ -1,6 +1,5 @@
 ﻿using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
-using DragonBot.HttpClient.ModelsDto;
 using DragonBoatHub.Contracts;
 using DragonBot.States;
 using MinimalTelegramBot;
@@ -17,13 +16,13 @@ namespace DragonBot.Handlers
     class ChooseTrainingLevelHandler : IHandler
     {
         private readonly IBotRequestContextAccessor _context;
-        private readonly ITrainingApiClient _trainingApiClient;
+        private readonly IUserTrainingApiClient _trainingApiClient;
         private readonly IStateMachine _stateMachine;
         private readonly ILocalizer _localizer;
 
 
         public ChooseTrainingLevelHandler(IBotRequestContextAccessor context,
-            ITrainingApiClient trainingApiClient, IStateMachine stateMachine, ILocalizer localizer)
+            IUserTrainingApiClient trainingApiClient, IStateMachine stateMachine, ILocalizer localizer)
         {
             _context = context;
             _trainingApiClient = trainingApiClient;

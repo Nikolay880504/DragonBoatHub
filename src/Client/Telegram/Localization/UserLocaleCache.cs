@@ -7,8 +7,8 @@ namespace DragonBot.Localization
 {
     class UserLocaleCache : IUserLocaleCache
     {
-        private readonly ITrainingApiClient _trainingApiClient;
-        public UserLocaleCache(ITrainingApiClient trainingApiClient)
+        private readonly IUserTrainingApiClient _trainingApiClient;
+        public UserLocaleCache(IUserTrainingApiClient trainingApiClient)
         {
             _trainingApiClient = trainingApiClient;
         }

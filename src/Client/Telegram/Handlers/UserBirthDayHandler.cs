@@ -1,12 +1,10 @@
 ﻿using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
-using DragonBot.Localization.Interfases;
 using DragonBot.States;
 using MinimalTelegramBot;
 using MinimalTelegramBot.Localization.Abstractions;
 using MinimalTelegramBot.Results;
 using MinimalTelegramBot.StateMachine.Abstractions;
-using Telegram.Bot.Types.ReplyMarkups;
 using Results = MinimalTelegramBot.Results.Results;
 
 namespace DragonBot.Handlers
@@ -14,12 +12,12 @@ namespace DragonBot.Handlers
     class UserBirthDayHandler : IHandler
     {
         private readonly IStateMachine _stateMachine;
-        private readonly ITrainingApiClient _trainingApiClient;
+        private readonly IUserTrainingApiClient _trainingApiClient;
         private readonly ILocalizer _localizer;
         private readonly IBotRequestContextAccessor _context;
 
         public UserBirthDayHandler(IStateMachine stateMachine,
-            ITrainingApiClient trainingApiClient, ILocalizer localizer, IBotRequestContextAccessor context)
+            IUserTrainingApiClient trainingApiClient, ILocalizer localizer, IBotRequestContextAccessor context)
         {
             _stateMachine = stateMachine;
             _trainingApiClient = trainingApiClient;

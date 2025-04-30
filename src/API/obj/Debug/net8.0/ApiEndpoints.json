@@ -1,13 +1,25 @@
 [
   {
-    "ContainingType": "DragonBoatHub.API.TrainingSessionsController",
-    "Method": "GetAvailableSessionsAsync",
-    "RelativePath": "api/TrainingSessions/available",
-    "HttpMethod": "GET",
+    "ContainingType": "DragonBoatHub.API.AdminTrainingSessionController",
+    "Method": "SaveNewTrainingSessionAsync",
+    "RelativePath": "api/AdminTrainingSession/save-newTrainingSession",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "sessionRequestDto",
+        "Type": "DragonBoatHub.Contracts.TrainingSessionRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "DragonBoatHub.API.UserController",
@@ -45,7 +57,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "DragonBoatHub.API.Models.UserDTO",
+        "Type": "DragonBoatHub.API.Models.UserDto",
         "IsRequired": true
       }
     ],
@@ -228,6 +240,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DragonBoatHub.API.UserTrainingSessionController",
+    "Method": "GetAvailableSessionsAsync",
+    "RelativePath": "api/UserTrainingSession/available",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

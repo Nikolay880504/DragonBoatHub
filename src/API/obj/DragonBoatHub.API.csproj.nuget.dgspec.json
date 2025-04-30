@@ -99,6 +99,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\DragonBoatHub.Contracts\\DragonBoatHub.Contracts.csproj": {
+                "projectPath": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\DragonBoatHub.Contracts\\DragonBoatHub.Contracts.csproj"
+              },
               "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Application\\DragonBoatHub.API.Application.csproj": {
                 "projectPath": "C:\\MyProjects\\DragonBoatHubProject\\DragonBoatHub\\src\\Application\\DragonBoatHub.API.Application.csproj"
               },

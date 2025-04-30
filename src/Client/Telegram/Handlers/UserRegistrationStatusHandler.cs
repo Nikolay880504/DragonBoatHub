@@ -1,16 +1,11 @@
 ﻿using DragonBoatHub.Contracts;
 using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
-using DragonBot.Extensions;
-using DragonBot.HttpClient.ModelsDto;
 using DragonBot.States;
 using MinimalTelegramBot;
 using MinimalTelegramBot.Localization.Abstractions;
 using MinimalTelegramBot.Results;
 using MinimalTelegramBot.StateMachine.Abstractions;
-using System.Globalization;
-using System.Reflection.Emit;
-using System.Text.RegularExpressions;
 using Telegram.Bot.Types.ReplyMarkups;
 using Results = MinimalTelegramBot.Results.Results;
 
@@ -19,12 +14,12 @@ namespace DragonBot.Handlers
     class UserRegistrationStatusHandler : IHandler
     {
         private readonly IBotRequestContextAccessor _context;
-        private readonly ITrainingApiClient _trainingApiClient;
+        private readonly IUserTrainingApiClient _trainingApiClient;
         private readonly IStateMachine _stateMachine;
         private readonly ILocalizer _localizer;
 
         public UserRegistrationStatusHandler(IBotRequestContextAccessor context,
-            ITrainingApiClient trainingApiClient, IStateMachine stateMachine, ILocalizer localizer)
+            IUserTrainingApiClient trainingApiClient, IStateMachine stateMachine, ILocalizer localizer)
         {
             _context = context;
             _trainingApiClient = trainingApiClient;

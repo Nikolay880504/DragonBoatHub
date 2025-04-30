@@ -16,7 +16,5 @@ namespace DragonBoatHub.API.Application
             var sessions = await _trainingRepository.GetAvailableSessionsAsync();
             return sessions.ToList();
         }
-
-        
     }
 }
