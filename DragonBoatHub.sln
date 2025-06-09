@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Application", "src\Application\DragonBoatHub.API.Application.csproj", "{508C526B-BE66-4A5C-B0E6-958F5D0E0568}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBot", "src\Client\Telegram\DragonBot.csproj", "{D214E435-1080-437E-8CB2-E32677DC8730}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Domain", "src\Domain\DragonBoatHub.API.Domain.csproj", "{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API.Infrastructure", "src\Infrastructure\DragonBoatHub.API.Infrastructure.csproj", "{DF2CDE94-36A3-4798-862D-4176093A2C40}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonBoatHub.API", "src\API\DragonBoatHub.API.csproj", "{163D0E8B-B345-4414-AF61-ED23E237AC3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.Admin", "DragonBoatHub.Admin\DragonBoatHub.Admin.csproj", "{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonBoatHub.Contracts", "DragonBoatHub.Contracts\DragonBoatHub.Contracts.csproj", "{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{508C526B-BE66-4A5C-B0E6-958F5D0E0568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508C526B-BE66-4A5C-B0E6-958F5D0E0568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508C526B-BE66-4A5C-B0E6-958F5D0E0568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508C526B-BE66-4A5C-B0E6-958F5D0E0568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D214E435-1080-437E-8CB2-E32677DC8730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D214E435-1080-437E-8CB2-E32677DC8730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D214E435-1080-437E-8CB2-E32677DC8730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D214E435-1080-437E-8CB2-E32677DC8730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A763DA3F-E78E-4633-8D9A-AFF0EB5BD065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2CDE94-36A3-4798-862D-4176093A2C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2CDE94-36A3-4798-862D-4176093A2C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2CDE94-36A3-4798-862D-4176093A2C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2CDE94-36A3-4798-862D-4176093A2C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163D0E8B-B345-4414-AF61-ED23E237AC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23E4F8B-A727-4EF4-B9BC-FD1296CEB307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5B8905-B3C8-4C44-A9F2-2341785E87D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD8A1F2F-876C-4D7B-9A1C-E3114D6E94EA}
+	EndGlobalSection
+EndGlobal
