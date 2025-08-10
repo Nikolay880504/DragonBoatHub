@@ -1,5 +1,4 @@
 # DragonBoatHub
-# DragonBoatHub
 
 This project is designed to provide clients of a rowing club with the ability to book training sessions and make payments for services, as well as to allow administrators to manage trainings and view statistics.  
 It includes a **Telegram bot**, a **REST API**, and a **core application** that interact with each other to manage training bookings.
@@ -24,4 +23,5 @@ It includes a **Telegram bot**, a **REST API**, and a **core application** that 
 - [ ] Add ability to delete training sessions
 - [ ] Advanced statistics for administrators
 - [ ] Implement payment functionality
+
 
