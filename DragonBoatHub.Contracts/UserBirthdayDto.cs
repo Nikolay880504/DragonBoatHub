@@ -1,5 +1,4 @@
 ﻿
-
 namespace DragonBoatHub.Contracts
 {
     public class UserBirthdayDto

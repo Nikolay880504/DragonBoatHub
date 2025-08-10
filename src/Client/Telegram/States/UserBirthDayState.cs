@@ -1,9 +1,4 @@
 ﻿using MinimalTelegramBot.StateMachine.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonBot.States
 {
@@ -13,7 +8,7 @@ namespace DragonBot.States
         {
         }
 
-        public static UserBirthDayState state
+        public static UserBirthDayState State
         {
             get { return new UserBirthDayState(6);}
         }

@@ -1,11 +1,14 @@
-﻿
-using Telegram.Bot.Types.ReplyMarkups;
+﻿using Telegram.Bot.Types.ReplyMarkups;
 using MinimalTelegramBot.Results;
 using Results = MinimalTelegramBot.Results.Results;
 using MinimalTelegramBot.StateMachine.Abstractions;
 using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using DragonBoatHub.TelegramBot.DragonBot.States;
 using DragonBot.Localization.Interfases;
+using DragonBot.States;
+using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
+using MinimalTelegramBot.Localization.Abstractions;
+using MinimalTelegramBot;
 
 namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
 {
@@ -13,25 +16,51 @@ namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
     {
         private readonly IStateMachine _stateMachine;
         private readonly IEnumerable<ISupportedLocale> _supportedLocales;
+        private readonly IUserTrainingApiClient _trainingApiClient;
+        private readonly ILocalizer _localizer;
+        private readonly IBotRequestContextAccessor _context;
 
-        public StartCommandHandler(IStateMachine stateMachine, IEnumerable<ISupportedLocale> supportedLocales)
+        public StartCommandHandler(ILocalizer localizer, IUserTrainingApiClient trainingApiClient,
+            IStateMachine stateMachine, IEnumerable<ISupportedLocale> supportedLocales, IBotRequestContextAccessor context)
         {
             _stateMachine = stateMachine;
             _supportedLocales = supportedLocales;
+            _localizer = localizer;
+            _trainingApiClient = trainingApiClient;
+            _context = context;
         }
-        public IResult HandleAsync()
+        public async Task<IResult> HandleAsync()
         {
-            _stateMachine.SetState(LanguageChoiceState.state);
+            var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
 
-            var languageKeyboardMarkup = new ReplyKeyboardMarkup(
-            _supportedLocales.Select(locale => new KeyboardButton(locale.NameButton)).ToArray())
+            ReplyKeyboardMarkup keyboardMarkup;
+            string message;
 
+            var isRegistered = await _trainingApiClient.CheckRegistractionByTelegramIdAsync(userId);
+            if (isRegistered)
             {
-                ResizeKeyboard = true
-            };
+                _stateMachine.SetState(MainMenuButtonsState.State);
+                var singUpButton = _localizer["Button.MainMenu"];
+                keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { singUpButton } })
+                {
+                    ResizeKeyboard = true
+                };
+                message = _localizer["MessageForMainMenu"];
+            }
+            else
+            {
+                _stateMachine.SetState(LanguageChoiceState.State);
 
-            return Results.Message(string.Join(" / ", _supportedLocales.Select(locale => locale.Message)),
-                                   keyboard: languageKeyboardMarkup);
+                var languageKeyboardMarkup = new ReplyKeyboardMarkup(
+                _supportedLocales.Select(locale => new KeyboardButton(locale.NameButton)).ToArray())
+
+                {
+                    ResizeKeyboard = true
+                };
+                return Results.Message(string.Join(" / ", _supportedLocales.Select(locale => locale.Message)),
+                                  keyboard: languageKeyboardMarkup);
+            }
+            return Results.Message(message, keyboard: keyboardMarkup);
         }
     }
 }

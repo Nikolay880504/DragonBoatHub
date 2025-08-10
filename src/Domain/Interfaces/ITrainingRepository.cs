@@ -4,6 +4,9 @@ namespace DragonBoatHub.API.Domain.Interfaces
 {
     public interface ITrainingRepository
     {
-       Task<IEnumerable<TrainingSession>> GetAvailableSessionsAsync();
+        Task<List<TrainingSession>> GetAvailableSessionsAsync(int userAge, int userLevel, long userId);
+        Task SetTrainingSessionForUserAsync(UserTrainingSession userTrainingSession);
+        Task<TrainingSession?> GetTrainingSessionByIdOrNullAsync(long trainingSessionId);
+        Task UpdateTrainingSessionCapacityAsync(TrainingSession trainingSession);
     }
 }

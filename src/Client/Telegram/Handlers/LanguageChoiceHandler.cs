@@ -1,5 +1,4 @@
-﻿
-using Telegram.Bot.Types.ReplyMarkups;
+﻿using Telegram.Bot.Types.ReplyMarkups;
 using DragonBoatHub.TelegramBot.DragonBot.Handlers.Interfaces;
 using MinimalTelegramBot.Results;
 using MinimalTelegramBot.StateMachine.Abstractions;
@@ -23,8 +22,8 @@ namespace DragonBot.Handlers
 
 
         public LanguageChoiceHandler(IStateMachine stateMachine,
-             IUserTrainingApiClient trainingApiClient, ILocalizer localizer, 
-             IBotRequestContextAccessor context,IEnumerable<ISupportedLocale> supportedLocales, 
+             IUserTrainingApiClient trainingApiClient, ILocalizer localizer,
+             IBotRequestContextAccessor context, IEnumerable<ISupportedLocale> supportedLocales,
              IUserLocaleCache userLocaleCache)
         {
             _stateMachine = stateMachine;
@@ -48,33 +47,16 @@ namespace DragonBot.Handlers
                 await _trainingApiClient.SetUserLocalizationAsync(userId, locale.Code);
                 _userLocaleCache.UpdateLocalCache(userId, locale.Code);
                 _context!.BotRequestContext!.UserLocale = new Locale(locale.Code);
-                
+
             }
 
-            ReplyKeyboardMarkup keyboardMarkup;
-            string message;
-
-            bool isRegistered = await _trainingApiClient.CheckRegistractionByTelegramIdAsync(userId);
-            if (isRegistered)
+            _stateMachine.SetState(RequestPhoneNumberState.State);
+            var registrationButton = _localizer["Button.Registration"];
+            var keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { registrationButton } })
             {
-                _stateMachine.SetState(MainMenuButtonsState.state);
-                var singUpButton = _localizer["Button.MainMenu"];
-                keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { singUpButton } })
-                {
-                    ResizeKeyboard = true
-                };
-                message = _localizer["MessageForMainMenu"];
-            }
-            else
-            {
-                _stateMachine.SetState(RequestPhoneNumberState.state);
-                var registrationButton = _localizer["Button.Registration"];
-                keyboardMarkup = new ReplyKeyboardMarkup(new[] { new KeyboardButton[] { registrationButton } })
-                {
-                    ResizeKeyboard = true
-                };
-                message = _localizer["MessageFromRegistration"];
-            }
+                ResizeKeyboard = true
+            };
+            var message = _localizer["MessageFromRegistration"];
 
             return Results.Message(message, keyboard: keyboardMarkup);
         }

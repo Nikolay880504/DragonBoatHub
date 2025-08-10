@@ -6,7 +6,6 @@ using MinimalTelegramBot.Localization.Abstractions;
 using MinimalTelegramBot.StateMachine.Abstractions;
 using DragonBot.States;
 
-
 namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
 {
     internal class RequestPhoneNumberHandler : IHandler
@@ -19,9 +18,9 @@ namespace DragonBoatHub.TelegramBot.DragonBot.Handlers
             _stateMachine = stateMachine;
         }
 
-        public IResult HandleAsync()
+        public IResult Handle()
         {
-            _stateMachine.SetState(RequestFirstNameState.state);
+            _stateMachine.SetState(RequestFirstNameState.State);
             KeyboardButton button = KeyboardButton.WithRequestContact(_localizer["Button.SendContact"]);  
 
             ReplyKeyboardMarkup keyboard = new ReplyKeyboardMarkup(button);

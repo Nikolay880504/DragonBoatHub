@@ -14,11 +14,17 @@ namespace DragonBoatHub.API
             _trainingService = trainingService;
         }
 
-        [HttpGet("available")]
-        public async Task<IActionResult> GetAvailableSessionsAsync()
+        [HttpGet("available/{telegramUserId}")]
+        public async Task<IActionResult> GetAvailableSessionsAsync(long telegramUserId)
         {
-            var sessions = await _trainingService.GetAvailableSessionsAsync();
+            var sessions = await _trainingService.GetAvailableSessionsAsync(telegramUserId);
             return Ok(sessions); 
-        }        
+        }
+
+        [HttpPost("set-trainingForUser/{telegramUserId}/{trainingSessionId}")]
+        public async Task SetTrainingSessionForUserAsync(long telegramUserId, long trainingSessionId)
+        {
+            await _trainingService.SetTrainingSessionForUserAsync (telegramUserId, trainingSessionId);
+        }
     }
 }

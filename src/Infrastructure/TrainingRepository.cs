@@ -1,47 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using DragonBoatHub.API.Domain.Interfaces;
 using DragonBoatHub.API.Domain.Models;
+using DragonBoatHub.API.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 namespace DragonBoatHub.API.Infrastructure
 {
     public class TrainingRepository : ITrainingRepository
     {
-        
+        private readonly ApplicationDbContext _context;
 
-        public Task<IEnumerable<TrainingSession>> GetAvailableSessionsAsync()
+        public TrainingRepository(ApplicationDbContext context)
         {
-            var sessions = new List<TrainingSession>
-{
-                /*
-    new TrainingSession
-    {
-        AgeCategory = "Old",
-        Capacity = 20,
-        StartDate = new DateTime(2024, 11, 10, 9, 0, 0),
-        EndDate = new DateTime(2024, 11, 10, 10, 0, 0)
-    },
-    new TrainingSession
-    {
-        AgeCategory = "Young",
-        Capacity = 15,
-        StartDate = new DateTime(2024, 11, 11, 11, 0, 0),
-        EndDate = new DateTime(2024, 11, 11, 12, 0, 0)
-    },
-    new TrainingSession
-    {
-        AgeCategory = "Adults",
-        Capacity = 10,
-        StartDate = new DateTime(2024, 11, 12, 14, 0, 0),
-        EndDate = new DateTime(2024, 11, 12, 15, 0, 0)
-    }
-                */
-};
-                
-            return Task.FromResult<IEnumerable<TrainingSession>>(sessions);
+            _context = context;
+        }
+        public async Task<List<TrainingSession>> GetAvailableSessionsAsync(int userAge, int userLevel, long userId)
+        {
+            return await _context.TrainingSessions
+               .Where(s => userAge >= s.MinAge && userAge <= s.MaxAge &&
+                     (s.Level == userLevel || s.Level == 0) &&
+                     !s.TrainingSessions.Any(uts => uts.UserId == userId))
+                     .ToListAsync();
+        }
+
+        public async Task<TrainingSession?> GetTrainingSessionByIdOrNullAsync(long trainingSessionId)
+        {
+            return await _context.TrainingSessions.FirstOrDefaultAsync(t => t.Id == trainingSessionId);
+        }
+
+        public async Task SetTrainingSessionForUserAsync(UserTrainingSession userTrainingSession)
+        {
+            _context.UserTrainingSessions.Add(userTrainingSession);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateTrainingSessionCapacityAsync(TrainingSession trainingSession)
+        {
+            _context.TrainingSessions.Where(ts => ts.Id == trainingSession.Id && ts.Capacity > 0)
+                .ExecuteUpdate(ts => ts.SetProperty(ts => ts.Capacity, ts => ts.Capacity - 1));
+            await _context.SaveChangesAsync();
         }
     }
-
 }

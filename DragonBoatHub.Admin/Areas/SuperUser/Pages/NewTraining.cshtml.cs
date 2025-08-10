@@ -18,10 +18,11 @@ namespace DragonBoatHub.Admin.Areas.SuperUser.Pages
         }
 
         [BindProperty]
-        public DateTime Date { get; set; } = DateTime.Now;
+        public DateOnly Date { get; set; } =  DateOnly.FromDateTime(DateTime.Now);
+
 
         [BindProperty]
-        public DateTime Time { get; set; }
+        public TimeOnly Time { get; set; }
         [BindProperty]
         [Range(1, int.MaxValue, ErrorMessage = "Capacity must be a positive number greater than zero.")]
         public int Capacity { get; set; }
@@ -60,8 +61,7 @@ namespace DragonBoatHub.Admin.Areas.SuperUser.Pages
             var userAgeCategory = _userAgeCategoryList.FirstOrDefault(c => c.Id == IdAgeCategory);
             var trainingSession = new TrainingSessionRequestDto
             {
-                Date = Date,
-                Time = Time,
+                TrainingDateTime = Date.ToDateTime(Time),
                 Capacity = Capacity,
                 Level = (int)Level,
                 MaxAge = userAgeCategory!.MaxAge,

@@ -29,11 +29,11 @@ namespace DragonBot.Handlers
         public async Task<IResult> HandleAsync()
         {
             var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-            string userLevel = _context!.BotRequestContext!.Update!.Message!.Text!;
+            var userLevel = _context!.BotRequestContext!.Update!.Message!.Text!;
             await _trainingApiClient.SetTrainingLevel(userId, GetUserLevel(userLevel));
             await _trainingApiClient.SetRegistrationStatusAsync(userId);
-            _stateMachine.SetState(MainMenuButtonsState.state);
-            KeyboardButton[] buttons = new KeyboardButton[]
+            _stateMachine.SetState(MainMenuButtonsState.State);
+            KeyboardButton[] buttons = 
              {
                   new KeyboardButton(_localizer["Button.MainMenu"])
              };
@@ -58,7 +58,6 @@ namespace DragonBot.Handlers
               { "Button.LevelPro", EUserLevelDto.Pro}
             };
 
-
             var userLevel = allKeyForUserLevel
                 .ToDictionary(
                     pair => _localizer.GetLocalizedString(pair.Key, locale),
@@ -66,7 +65,6 @@ namespace DragonBot.Handlers
                 );
 
             return (int)userLevel[userLevelName];
-
         }
     }
 }

@@ -11,6 +11,7 @@ using DragonBot.Handlers;
 using MinimalTelegramBot.StateMachine.Extensions;
 using DragonBot.Localization;
 using DragonBot.Localization.Interfases;
+using DragonBot.HttpClient;
 namespace DragonBoatHub.TelegramBot
 {
     internal class Program
@@ -43,7 +44,7 @@ namespace DragonBoatHub.TelegramBot
             }
 
             builder.Services.AddTransient<LanguageChoiceHandler>();
-            builder.Services.AddTransient<AvailableTrainingsHandler>();
+            builder.Services.AddTransient<SingUpForTrainingHandler>();
             builder.Services.AddTransient<StartCommandHandler>();
             builder.Services.AddTransient<RequestPhoneNumberHandler>();
             builder.Services.AddTransient<RequestFirstNameHandler>();
@@ -51,9 +52,13 @@ namespace DragonBoatHub.TelegramBot
             builder.Services.AddTransient<UserBirthDayHandler>();
             builder.Services.AddTransient<UserRegistrationStatusHandler>();
             builder.Services.AddTransient<ChooseTrainingLevelHandler>();
+            builder.Services.AddTransient<MainMenuButtonsHandler>();
+            builder.Services.AddTransient<SaveTrainingSessionForUser>();
             builder.Services.AddSingleton<IUserLocaleCache, UserLocaleCache>();
             RegisterLocalization(builder.Services, supportedLocales);
             builder.Services.AddRefitClient<IUserTrainingApiClient>()
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7288"));
+            builder.Services.AddRefitClient<IUserTrainingSessionApiClient>()
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7288"));
             builder.Services.AddStateMachine();
             var bot = builder.Build();

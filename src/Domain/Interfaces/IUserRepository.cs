@@ -4,16 +4,14 @@ namespace DragonBoatHub.API.Domain.Interfaces
 {
     public interface IUserRepository
     {
-        Task<bool> CheckRegistrationAsync(long userId);
-        Task SetUserLocaleAsync(long userId, string locale);
-        Task<string> GetUserLocaleOrDefaultAsync(long userId);
-        Task SetPhoneNumberAsync(long userId, string phoneNumber);
-        Task  SetFirstNameAsync(long userId, string firstName);
-        Task SetLastNameAsync(long userId, string lastName);
-        Task SetBirthDayAsync (long userId, DateTime birthDay);
-        Task SetRegistrationStatusAsync(long userId);
-
-        Task SetTrainingLevel(long userId,  int userLevel);
-
+        Task SetUserLocaleAsync(User user);
+        Task UpdateUserLocaleAsync(User user);
+        Task SetPhoneNumberAsync(User user);
+        Task SetFirstNameAsync(User user);
+        Task SetLastNameAsync(User user);
+        Task SetBirthDayAsync (User user);
+        Task SetRegistrationStatusAsync(User user);
+        Task SetTrainingLevelAsync(User user);
+        Task<User?> GetUserByTelegramIdAsync(long telegramUserId);
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DragonBoatHub.API.Application.Intrfaces;
-using DragonBoatHub.API.Models;
-
+using DragonBoatHub.Contracts;
 
 namespace DragonBoatHub.API
 {
@@ -31,7 +30,7 @@ namespace DragonBoatHub.API
         [HttpGet("get-locale/{userId}")]
         public async Task<string?> GetUserLocaleAsync(long userId)
         {
-            return await _userService.GetUserLocleAsync(userId);
+            return await _userService.GetUserLocaleOrDefaultAsync(userId);
         }
 
         [HttpPost("set-phoneNumber/{userId}/{phoneNumber}")]

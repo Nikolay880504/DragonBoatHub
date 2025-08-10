@@ -9,7 +9,7 @@ namespace DragonBoatHub.API.Domain.Models
             Registered = 1,
         }
         
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? PhoneNumber { get; set; }
@@ -18,6 +18,8 @@ namespace DragonBoatHub.API.Domain.Models
         public string? Localization { get; set; }
         public long? TelegramUserId { get; set; }
         public UserStatus Status { get; set; } = UserStatus.Unregistered;
+
+        public ICollection<UserTrainingSession> TrainingSessions { get; set; } = new List<UserTrainingSession>();
     }
 
 }

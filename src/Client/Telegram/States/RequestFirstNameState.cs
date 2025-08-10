@@ -8,7 +8,7 @@ namespace DragonBot.States
         {
         }
 
-        public static RequestFirstNameState state
+        public static RequestFirstNameState State
         {
             get { return new RequestFirstNameState(4); }
         }

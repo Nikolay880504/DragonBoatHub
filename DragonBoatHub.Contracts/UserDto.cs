@@ -1,4 +1,4 @@
-﻿namespace DragonBoatHub.API.Models
+﻿namespace DragonBoatHub.Contracts
 {
     public class UserDto
     {

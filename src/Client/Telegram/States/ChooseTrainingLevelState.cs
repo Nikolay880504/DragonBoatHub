@@ -1,10 +1,4 @@
-﻿using DragonBoatHub.TelegramBot.DragonBot.States;
-using MinimalTelegramBot.StateMachine.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MinimalTelegramBot.StateMachine.Abstractions;
 
 namespace DragonBot.States
 {
@@ -13,7 +7,7 @@ namespace DragonBot.States
         public ChooseTrainingLevelState(int stateId) : base(stateId)
         {
         }
-        public static ChooseTrainingLevelState state
+        public static ChooseTrainingLevelState State
         {
             get { return new ChooseTrainingLevelState(8); }
         }

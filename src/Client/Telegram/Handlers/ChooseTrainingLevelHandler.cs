@@ -31,18 +31,18 @@ namespace DragonBot.Handlers
         }
         public async Task<IResult> HandleAsync()
         {
-            long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-            string birthDate = _context!.BotRequestContext!.Update!.Message!.Text!;
+            var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
+            var birthDate = _context!.BotRequestContext!.Update!.Message!.Text!;
             if (!IsValidDateOfBirth(birthDate))
             {
                 return Results.Message(_localizer["BirthDayCorrect"]);
             }
             var birthDay = DateTime.ParseExact(birthDate, "dd.MM.yyyy", CultureInfo.InvariantCulture);
             var userDTO = new UserBirthdayDto { BirthDay = birthDay, TelegramUserId = userId };
-            _stateMachine.SetState(UserRegistrationStatusState.state);
+            _stateMachine.SetState(UserRegistrationStatusState.State);
             await _trainingApiClient.SetBirthDayAsync(userDTO);
             
-            KeyboardButton[] buttons = new KeyboardButton[]
+            KeyboardButton[] buttons = 
             {
                   new KeyboardButton(_localizer["Button.LevelBeginner"]),
                   new KeyboardButton(_localizer["Button.LevelAmateur"]),

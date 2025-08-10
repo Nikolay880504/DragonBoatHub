@@ -28,9 +28,9 @@ namespace DragonBot.Handlers
 
         public async Task<IResult> HandleAsync()
         {
-            long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-            string phoneNumber = _context!.BotRequestContext!.Update.Message!.Contact!.PhoneNumber;
-            _stateMachine.SetState(RequestLastNameState.state);
+            var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
+            var phoneNumber = _context!.BotRequestContext!.Update.Message!.Contact!.PhoneNumber;
+            _stateMachine.SetState(RequestLastNameState.State);
             await _trainingApiClient.SetPhoneNumberAsync(userId, phoneNumber);
             ReplyKeyboardRemove keyboardRemove = new ReplyKeyboardRemove();
 

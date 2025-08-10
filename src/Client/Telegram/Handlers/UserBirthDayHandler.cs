@@ -27,10 +27,10 @@ namespace DragonBot.Handlers
 
         public async Task<IResult> HandleAsync()
         {
-            long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-            string lastName = _context!.BotRequestContext!.Update.Message.Text!;
+            var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
+            var lastName = _context!.BotRequestContext!.Update.Message.Text!;
             await _trainingApiClient.SetLastNameAsync(userId, lastName);
-            _stateMachine.SetState(ChooseTrainingLevelState.state);
+            _stateMachine.SetState(ChooseTrainingLevelState.State);
             return Results.Message(_localizer["BirthDay"]);
         }
     }

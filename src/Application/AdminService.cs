@@ -19,10 +19,9 @@ namespace DragonBoatHub.API.Application
         {
             var newTraining = new TrainingSession
             {
-                Date = trainingSessionRequestDto.Date,
-                Time = trainingSessionRequestDto.Time,
+                TrainingDateTime = trainingSessionRequestDto.TrainingDateTime,               
                 Capacity = trainingSessionRequestDto.Capacity,
-                Level = trainingSessionRequestDto.Capacity,
+                Level = trainingSessionRequestDto.Level,
                 MaxAge = trainingSessionRequestDto.MaxAge,
                 MinAge = trainingSessionRequestDto.MinAge
             };

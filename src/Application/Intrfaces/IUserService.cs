@@ -7,7 +7,7 @@ namespace DragonBoatHub.API.Application.Intrfaces
     public interface IUserService
     {
         Task SetUserLocaleAsync(long userId, string locale);
-        Task<string> GetUserLocleAsync(long userId);
+        Task<string> GetUserLocaleOrDefaultAsync(long userId);
         Task<bool> CheckRegistractionByTelegramIdAsync(long userId);
         Task SetPhoneNumberAsync(long userId, string phoneNumber);
         Task SetFirstNameAsync(long userId, string firstName);

@@ -1,60 +1,119 @@
 ﻿using DragonBoatHub.API.Application.Intrfaces;
 using DragonBoatHub.API.Domain.Interfaces;
 using DragonBoatHub.API.Domain.Models;
-using DragonBoatHub.Contracts;
 
 namespace DragonBoatHub.API.Application
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-
         public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
-        public async Task SetUserLocaleAsync(long userId, string locale)
+        public async Task SetUserLocaleAsync(long telegramId, string locale)
         {
-            await _userRepository.SetUserLocaleAsync(userId, locale);
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+            {
+                var newUser = new User { TelegramUserId = telegramId, Localization = locale };
+                await _userRepository.SetUserLocaleAsync(newUser);
+            }
+            else
+            {
+                existingUser.Localization = locale;
+                await _userRepository.UpdateUserLocaleAsync(existingUser);
+            }
         }
-        public async Task<bool> CheckRegistractionByTelegramIdAsync(long userId)
+        public async Task<bool> CheckRegistractionByTelegramIdAsync(long telegramId)
         {
-            return await _userRepository.CheckRegistrationAsync(userId);
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+            {
+                return false;
+            }
+            return true;
         }
 
-        public async Task<string> GetUserLocleAsync(long userId)
+        public async Task<string> GetUserLocaleOrDefaultAsync(long telegramId)
         {
-            return await _userRepository.GetUserLocaleOrDefaultAsync(userId);
+            var defaultLocalization = "sl";
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (!string.IsNullOrEmpty(existingUser?.Localization))
+            {
+                return existingUser.Localization;
+            }
+            return defaultLocalization;
         }
 
-        public async Task SetPhoneNumberAsync(long userId, string phoneNumber)
+        public async Task SetPhoneNumberAsync(long telegramId, string phoneNumber)
         {
-            await _userRepository.SetPhoneNumberAsync(userId, phoneNumber);
-        }
-        public async Task SetFirstNameAsync(long userId, string firstName)
-        {
-            await _userRepository.SetFirstNameAsync(userId, firstName);
-        }
-       
-        public async Task SetLastNameAsync(long userId, string lastName)
-        {
-            await _userRepository.SetLastNameAsync(userId, lastName);
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+                throw new InvalidOperationException($" User with telegram ID :{telegramId} not found!");
+
+            existingUser.PhoneNumber = phoneNumber;
+            await _userRepository.SetPhoneNumberAsync(existingUser);   
         }
 
-        public async Task SetBirthDayAsync(long userId, DateTime birthDay)
+        public async Task SetFirstNameAsync(long telegramId, string firstName)
         {
-            
-            await _userRepository.SetBirthDayAsync(userId, birthDay);
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+                throw new InvalidOperationException($" User with telegram ID :{telegramId} not found!");
+
+            existingUser.FirstName = firstName;
+            await _userRepository.SetFirstNameAsync(existingUser);  
         }
 
-        public async Task SetRegistrationStatusAsync(long trlegramId)
+        public async Task SetLastNameAsync(long telegramId, string lastName)
         {
-            await _userRepository.SetRegistrationStatusAsync(trlegramId);
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+                throw new InvalidOperationException($" User with telegram ID :{telegramId} not found!");
+
+            existingUser.LastName = lastName;
+            await _userRepository.SetLastNameAsync(existingUser);
         }
 
-        public async Task SetTrainingLevel(long userId, int userLevel)
+
+        public async Task SetBirthDayAsync(long telegramId, DateTime birthDay)
         {
-            await _userRepository.SetTrainingLevel(userId, userLevel);
+
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+                throw new InvalidOperationException($" User with telegram ID :{telegramId} not found!");
+
+            existingUser.DateOfBirth = birthDay;
+            await _userRepository.SetLastNameAsync(existingUser);
+        }
+
+        public async Task SetRegistrationStatusAsync(long telegramId)
+        {
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+
+            if (existingUser is null)
+                throw new InvalidOperationException($" User with telegram ID :{telegramId} not found!");
+
+            existingUser.Status = User.UserStatus.Registered;
+            await _userRepository.SetLastNameAsync(existingUser);
+        }
+
+        public async Task SetTrainingLevel(long telegramId, int userLevel)
+        {
+            var existingUser = await _userRepository.GetUserByTelegramIdAsync(telegramId);
+            if (existingUser is null)
+                throw new InvalidOperationException($" User with telegram ID :{telegramId} not found!");
+
+            existingUser.Level = (EUserLevel)userLevel;
+            await _userRepository.SetTrainingLevelAsync(existingUser);
         }
     }
 }

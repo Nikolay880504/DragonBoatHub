@@ -1,5 +1,4 @@
-﻿
-using MinimalTelegramBot.StateMachine.Abstractions;
+﻿using MinimalTelegramBot.StateMachine.Abstractions;
 
 namespace DragonBot.States
 {
@@ -8,7 +7,7 @@ namespace DragonBot.States
         public MainMenuButtonsState(int stateId) : base(stateId)
         {
         }
-        public static MainMenuButtonsState state
+        public static MainMenuButtonsState State
         {
             get { return new MainMenuButtonsState(2); }
         }

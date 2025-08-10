@@ -15,6 +15,7 @@ namespace DragonBoatHub.API
 
             _adminService = adminService;
         }
+
         [HttpPost("save-newTrainingSession")]
         public async Task  SaveNewTrainingSessionAsync([FromBody] TrainingSessionRequestDto sessionRequestDto)
         {

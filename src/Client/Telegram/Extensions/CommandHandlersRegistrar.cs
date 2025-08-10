@@ -19,24 +19,28 @@ namespace DragonBot.Extensions
             app.Handle(([FromServices] StartCommandHandler startCommandHandler) 
                 => startCommandHandler.HandleAsync()).FilterCommand("/start");
             app.Handle(([FromServices] LanguageChoiceHandler languageChoice)
-                => languageChoice.HandleAsync()).FilterState(LanguageChoiceState.state);
-            app.Handle(([FromServices] AvailableTrainingsHandler mainMenu) 
-                => mainMenu.HandleAsync()).FilterState(MainMenuButtonsState.state).
-                FilterMessageTextWithLocalizer("Button.SignUpForTraining");
-            app.Handle(([FromServices] RequestPhoneNumberHandler singUp) 
-                => singUp.HandleAsync()).FilterState(RequestPhoneNumberState.state).
-                FilterMessageTextWithLocalizer("Button.Registration");
+                => languageChoice.HandleAsync()).FilterState(LanguageChoiceState.State);
+            app.Handle(([FromServices] MainMenuButtonsHandler mainMenu)
+                => mainMenu.Handle()).FilterMessageTextWithLocalizer("Button.MainMenu");
+            app.Handle(([FromServices] RequestPhoneNumberHandler singUp)
+                => singUp.Handle()).FilterState(RequestPhoneNumberState.State);
             app.Handle(([FromServices] RequestFirstNameHandler requestFirstName) 
-                => requestFirstName.HandleAsync()).FilterState(RequestFirstNameState.state);
+                => requestFirstName.HandleAsync()).FilterState(RequestFirstNameState.State);
             app.Handle(([FromServices] RequestLastNameHandler requestLastName) 
-                => requestLastName.HandleAsync()).FilterState(RequestLastNameState.state);
+                => requestLastName.HandleAsync()).FilterState(RequestLastNameState.State);
             app.Handle(([FromServices] UserBirthDayHandler userBirthDayHandler ) 
-                => userBirthDayHandler.HandleAsync()).FilterState(UserBirthDayState.state);
+                => userBirthDayHandler.HandleAsync()).FilterState(UserBirthDayState.State);
             app.Handle(([FromServices] ChooseTrainingLevelHandler chooseTrainingLevel) 
-                => chooseTrainingLevel.HandleAsync()).FilterState(ChooseTrainingLevelState.state);
+                => chooseTrainingLevel.HandleAsync()).FilterState(ChooseTrainingLevelState.State);
             app.Handle(([FromServices] UserRegistrationStatusHandler userRegistration) 
-                => userRegistration.HandleAsync()).FilterState(UserRegistrationStatusState.state);
-           
+                => userRegistration.HandleAsync()).FilterState(UserRegistrationStatusState.State);
+            app.Handle(([FromServices] SingUpForTrainingHandler singForTraining)
+                => singForTraining.HandleAsync()).FilterMessageTextWithLocalizer("Button.SignUpForTraining");
+            app.Handle(([FromServices] SingUpForTrainingHandler singForTraining)
+                => singForTraining.HandleAsync())
+                .FilterState(SingUpForTrainingState.State);
+            app.Handle(([FromServices] SaveTrainingSessionForUser saveTrainingSessionFor)
+                => saveTrainingSessionFor.HandleAsync()).FilterState(SaveTrainingSessionForUserState.State);            
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿
-using DragonBoatHub.TelegramBot.DragonBot.HttpClient;
-using DragonBoatHub.TelegramBot.DragonBot.States;
 using DragonBot.Localization.Interfases;
 using MinimalTelegramBot.Localization.Abstractions;
 

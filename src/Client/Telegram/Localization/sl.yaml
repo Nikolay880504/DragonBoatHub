@@ -1,21 +1,25 @@
 ﻿Lang: Slovenski
-MessageForMainMenu: "Izberite gumb Glavni meni za nadaljevanje"
-MessageFromRegistration: "Prosimo, registrirajte se za nadaljevanje:"
-AvailableTrainings: "Izberite trening:"
-PleaseSendContact: "Prosimo, pošljite stik"
-FirstName: "Za nadaljevanje registracije prosimo, vnesite svoje ime."
-LastName: "Za nadaljevanje registracije, prosimo, vnesite vaše priimek."
-BirthDay: "Prosimo, vnesite svoj datum rojstva v formatu dd.mm.llll, da dokončate registracijo."
-BirthDayCorrect: "Prosimo, vnesite veljaven datum v formatu dd.mm.llll (npr. 01.01.1990)."
-RegistrationSuccessful : "Registracija uspešna! Dobrodošli!"
-ChooseTrainingLevel: "Izberite gumb s svojo raven"
+CultureInfo: "sl-SI"
+MessageForMainMenu: "Klikni gumb »Glavni meni« za začetek!"
+MessageFromRegistration: "Najprej se hitro registriraj:"
+AvailableTrainings: "Izberi trening s seznama:"
+PleaseSendContact: "Pošlji nam svoj kontakt, da ostanemo v stiku."
+FirstName: "Kako ti je ime?"
+LastName: "Super! Zdaj še tvoj priimek, prosim."
+BirthDay: "Kdaj si rojen_a? Vpiši datum v obliki dd.mm.llll (npr. 01.01.1990)."
+BirthDayCorrect: "Ups! Preveri datum – uporabi obliko dd.mm.llll (npr. 01.01.1990)."
+RegistrationSuccessful: "Uspešno si registriran_a! Dobrodošel_a! 💪"
+ChooseTrainingLevel: "Izberi gumb, ki najbolj ustreza tvoji ravni – brez skrbi!"
+InnerMainMenu: "Tukaj je glavni meni. Kaj želite narediti?"
+Age: "Starost:"
+Slots: "mest"
 Button:
  SignUpForTraining: Prijava na trening
  Registration: Registracija
  SendContact: Pošlji stik
- MainMenu : "Glavni meni"
- LevelBeginner : "Začetnik"
- LevelAmateur : "Amater"
- LevelPro : "Profi"
+ MainMenu: "Glavni meni"
+ LevelBeginner: "Začetnik"
+ LevelAmateur: "Amater"
+ LevelPro: "Profi"
 
 

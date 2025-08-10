@@ -26,9 +26,9 @@ namespace DragonBot.Handlers
         }
         public async Task<IResult> HandleAsync()
         {
-            _stateMachine.SetState(UserBirthDayState.state);
-            long userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
-            string firstName = _context!.BotRequestContext!.Update.Message.Text!;
+            _stateMachine.SetState(UserBirthDayState.State);
+            var userId = _context!.BotRequestContext!.Update!.Message!.From!.Id;
+            var firstName = _context!.BotRequestContext!.Update.Message.Text!;
             await _trainingApiClient.SetFirstNameAsync(userId, firstName);
 
             return Results.Message(_localizer["LastName"]);

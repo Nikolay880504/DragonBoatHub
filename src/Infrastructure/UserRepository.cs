@@ -13,122 +13,86 @@ namespace DragonBoatHub.API.Infrastructure
         {
             _context = context;
         }
-        public async Task<bool> CheckRegistrationAsync(long userId)
+        
+        public async Task SetBirthDayAsync(User user)
         {
-            var existingUser = await _context.Users
-                .Where(u => u.TelegramUserId == userId)
-                .Select(u => u.Status)
-                .FirstOrDefaultAsync();
 
-            return existingUser == User.UserStatus.Registered;
+            if (user is not null)
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public async Task<string> GetUserLocaleOrDefaultAsync(long userId)
+        public async Task SetFirstNameAsync(User user)
         {
-            var defaultLocalization = "sn";
-            var existingUser = await _context.Users.SingleOrDefaultAsync(u => u.TelegramUserId == userId);
 
-            if (!string.IsNullOrEmpty(existingUser?.Localization))
+            if (user is not null)
             {
-                return existingUser.Localization;
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
             }
-
-            return defaultLocalization;
         }
 
-        public async Task SetBirthDayAsync(long userId, DateTime birthDay)
+        public async Task SetLastNameAsync(User user)
         {
-            var existingUser = await _context.Users.SingleOrDefaultAsync(u => u.TelegramUserId == userId);
-
-            if (existingUser is not null)
+            if (user is not null)
             {
-                existingUser.DateOfBirth = birthDay;
-                _context.Users.Update(existingUser);
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
         }
 
-        public async Task SetFirstNameAsync(long userId, string firstName)
+        public async Task SetPhoneNumberAsync(User user)
         {
-            var existingUser = await _context.Users.SingleOrDefaultAsync(u => u.TelegramUserId == userId);
-
-            if (existingUser is not null)
+            if (user is not null)
             {
-                existingUser.FirstName = firstName;
-                _context.Users.Update(existingUser);
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
         }
 
-        public async Task SetLastNameAsync(long userId, string lastName)
+        public async Task SetRegistrationStatusAsync(User user)
         {
-            var existingUser = await _context.Users.SingleOrDefaultAsync(u => u.TelegramUserId == userId);
-
-            if (existingUser is not null)
+            if (user is not null)
             {
-                existingUser.LastName = lastName;
-                _context.Users.Update(existingUser);
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
+        }
+        
+        public async Task SetUserLocaleAsync(User user)
+        {
+            if (user is not null)
+            {
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public async Task SetPhoneNumberAsync(long userId, string phoneNumber)
+        public async Task SetTrainingLevelAsync(User user)
         {
-            var existingUser = await _context.Users.SingleOrDefaultAsync(u => u.TelegramUserId == userId);
 
-            if (existingUser is not null)
+            if (user is not null)
             {
-                existingUser.PhoneNumber = phoneNumber;
-                _context.Users.Update(existingUser);
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
         }
 
-        public async Task SetRegistrationStatusAsync(long userId)
+        public async Task<User?> GetUserByTelegramIdAsync(long userId)
         {
-            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.TelegramUserId == userId);
-
-            if (existingUser is not null)
-            {
-                existingUser.Status = User.UserStatus.Registered;
-                _context.Users.Update(existingUser);
-            }
-            await _context.SaveChangesAsync();
+            return await _context.Users.FirstOrDefaultAsync(u => u.TelegramUserId == userId);
         }
 
-        public async Task SetUserLocaleAsync(long userId, string locale)
+        public async Task UpdateUserLocaleAsync(User user)
         {
-            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.TelegramUserId == userId);
-
-            if (existingUser is null)
+            if (user is not null)
             {
-                var newUser = new User { TelegramUserId = userId, Localization = locale };
-                _context.Users.Add(newUser);
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
             }
-            else
-            {
-                existingUser.Localization = locale;
-                _context.Users.Update(existingUser);
-            }
-
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task SetTrainingLevel(long userId, int userLevel)
-        {
-            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.TelegramUserId == userId);
-
-            if (existingUser is not null)
-            {
-                existingUser.Level = (EUserLevel)userLevel;
-                _context.Users.Update(existingUser);
-            }
-            
-            await _context.SaveChangesAsync();
         }
     }
 }

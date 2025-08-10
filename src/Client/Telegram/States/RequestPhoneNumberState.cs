@@ -1,5 +1,4 @@
-﻿
-using MinimalTelegramBot.StateMachine.Abstractions;
+﻿using MinimalTelegramBot.StateMachine.Abstractions;
 
 namespace DragonBot.States
 {
@@ -8,7 +7,7 @@ namespace DragonBot.States
         public RequestPhoneNumberState(int stateId) : base(stateId)
         {
         }
-        public static RequestPhoneNumberState state
+        public static RequestPhoneNumberState State
         {
             get { return new RequestPhoneNumberState(3); }
         }

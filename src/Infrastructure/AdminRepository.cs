@@ -15,8 +15,11 @@ namespace DragonBoatHub.API.Infrastructure
 
         public async Task SaveNewTrainingSessionAsync(TrainingSession newTraining)
         {
-            _context.TrainingSessions.Add(newTraining);
-            await _context.SaveChangesAsync();
+            if (newTraining is not null)
+            {
+                _context.TrainingSessions.Add(newTraining);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

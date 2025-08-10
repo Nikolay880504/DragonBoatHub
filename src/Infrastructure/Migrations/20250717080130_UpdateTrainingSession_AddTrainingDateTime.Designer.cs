@@ -3,6 +3,7 @@ using System;
 using DragonBoatHub.API.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,21 +11,26 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DragonBoatHub.API.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250717080130_UpdateTrainingSession_AddTrainingDateTime")]
+    partial class UpdateTrainingSession_AddTrainingDateTime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
 
             modelBuilder.Entity("DragonBoatHub.API.Domain.Models.TrainingSession", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Capacity")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Level")
                         .HasColumnType("INTEGER");
@@ -35,7 +41,7 @@ namespace DragonBoatHub.API.Infrastructure.Migrations
                     b.Property<int>("MinAge")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("TrainingDateTime")
+                    b.Property<TimeOnly>("Time")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -45,7 +51,7 @@ namespace DragonBoatHub.API.Infrastructure.Migrations
 
             modelBuilder.Entity("DragonBoatHub.API.Domain.Models.User", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -76,50 +82,6 @@ namespace DragonBoatHub.API.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("DragonBoatHub.API.Domain.Models.UserTrainingSession", b =>
-                {
-                    b.Property<long>("SessionId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<long>("UserId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("SessionId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserTrainingSessions");
-                });
-
-            modelBuilder.Entity("DragonBoatHub.API.Domain.Models.UserTrainingSession", b =>
-                {
-                    b.HasOne("DragonBoatHub.API.Domain.Models.TrainingSession", "TrainingSession")
-                        .WithMany("TrainingSessions")
-                        .HasForeignKey("SessionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DragonBoatHub.API.Domain.Models.User", "User")
-                        .WithMany("TrainingSessions")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TrainingSession");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("DragonBoatHub.API.Domain.Models.TrainingSession", b =>
-                {
-                    b.Navigation("TrainingSessions");
-                });
-
-            modelBuilder.Entity("DragonBoatHub.API.Domain.Models.User", b =>
-                {
-                    b.Navigation("TrainingSessions");
                 });
 #pragma warning restore 612, 618
         }
