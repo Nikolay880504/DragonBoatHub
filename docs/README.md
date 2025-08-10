@@ -9,7 +9,8 @@ It includes a **Telegram bot**, a **REST API**, and a **core application** that 
 - Adding training sessions by an administrator
 - Viewing statistics for administrators
 - Payment processing
-
+- Language selection option
+  
 ## Technologies
 - ASP.NET Core 8
 - Entity Framework Core
@@ -23,5 +24,6 @@ It includes a **Telegram bot**, a **REST API**, and a **core application** that 
 - [ ] Add ability to delete training sessions
 - [ ] Advanced statistics for administrators
 - [ ] Implement payment functionality
+
 
 
