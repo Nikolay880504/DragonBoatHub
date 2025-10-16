@@ -1,15 +1,29 @@
 # DragonBoatHub
 
-This project is designed to provide services to clients of a rowing club. It includes a Telegram bot, a REST API, and a core application that interact with each other to manage bookings for training sessions, payments, and information about the club.
+This project is designed to provide clients of a rowing club with the ability to book training sessions and make payments for services, as well as to allow administrators to manage trainings and view statistics.  
+It includes a **Telegram bot**, a **REST API**, and a **core application** that interact with each other to manage training bookings.
 
 ## Features
+- User registration and authentication
+- Booking suitable training sessions based on age and skill level
+- Adding training sessions by an administrator
+- Viewing statistics for administrators
+- Payment processing
+- Language selection option
+  
+## Technologies
+- ASP.NET Core 8
+- Entity Framework Core
+- SQLite
+- Razor Pages
+- Telegram Bot API
+- Clean Architecture
+- Refit
 
-- **Training Session Booking**: Users can book training sessions for dragon boat rowing.
-- **Payment Processing**: Integration with payment systems for handling payments.
-- **Club Information**: Provides information about the rowing club, training sessions, schedules, and other services.
+## Roadmap
+- [ ] Add ability to delete training sessions
+- [ ] Advanced statistics for administrators
+- [ ] Implement payment functionality
 
-## Project Structure
 
-- **DragonBoatHub.Core**: Core business logic and data models.
-- **DragonBoatHub.API**: REST API for client interaction.
-- **DragonBoatHub.Bot**: Telegram bot that provides an interface for users.
+
