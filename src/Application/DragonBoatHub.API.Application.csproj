@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DragonBoatHub.Contracts\DragonBoatHub.Contracts.csproj" />
+    <ProjectReference Include="..\Contracts\DragonBoatHub.Contracts.csproj" />
     <ProjectReference Include="..\Domain\DragonBoatHub.API.Domain.csproj" />
   </ItemGroup>
 

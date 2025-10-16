@@ -17,9 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DragonBoatHub.Contracts\DragonBoatHub.Contracts.csproj" />
+    <ProjectReference Include="..\Contracts\DragonBoatHub.Contracts.csproj" />
     <ProjectReference Include="..\Application\DragonBoatHub.API.Application.csproj" />
-    <ProjectReference Include="..\Client\Telegram\DragonBot.csproj" />
     <ProjectReference Include="..\Domain\DragonBoatHub.API.Domain.csproj" />
     <ProjectReference Include="..\Infrastructure\DragonBoatHub.API.Infrastructure.csproj" />
   </ItemGroup>

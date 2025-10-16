@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DragonBoatHub.Contracts\DragonBoatHub.Contracts.csproj" />
+    <ProjectReference Include="..\Contracts\DragonBoatHub.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
